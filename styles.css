@@ -68,7 +68,7 @@ nav ul .dropdown {
     background-color: white;
     border-radius: 5px;
     min-width: 200px;
-    z-index: 1;
+    z-index: 20;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -107,36 +107,33 @@ nav ul .dropdown a:hover {
     background-color: #0e839c;
 }
 
-/* Стили слайдера */
 .slider {
-    margin: 20px 0;
     position: relative;
+    width: 100%;
     height: 400px;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide.active {
+    left: 0;
+    opacity: 1;
+    z-index: 1;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.section-title {
-    font-size: 1.6em;
-    margin-bottom: 20px;
-    color: #12a1c5;
-    text-align: center;
 }
 
 /* Секции */
