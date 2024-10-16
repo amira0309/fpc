@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(90deg, #12a1c5, #0e839c);
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    font-size: 1.8em;
+}
+
+.logo img {
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 200px;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+nav ul .dropdown li {
+    margin: 0;
+}
+
+nav ul .dropdown a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul .dropdown a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #12a1c5;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0e839c;
+}
+
+/* Стили слайдера */
+.slider {
+    margin: 20px 0;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #12a1c5;
+    text-align: center;
+}
+
+/* Секции */
+section {
+    padding: 40px 0;
+}
+
+section.about-us, section.news {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.about-us p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.news article {
+    margin-bottom: 20px;
+}
+
+.news article h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news article p {
+    color: #666;
+}
+
+/* Мультиязычность */
+.language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-toggle a {
+    color: white;
+    background: #0e839c;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.language-toggle a:hover {
+    background: #12a1c5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.4em;
+        text-align: center;
+        margin: 0;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .section-title {
+        font-size: 1.4em;
+    }
+
+    .language-toggle {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .slider {
+        height: 200px;
+    }
+
+    .about-us, .news {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
