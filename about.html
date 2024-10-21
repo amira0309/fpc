@@ -5,24 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О центре - Фтизиопульмонологический центр</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+ .button-list {
+    list-style-type: none; /* Убираем маркеры */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+.button-list li {
+    margin: 10px 0; /* Отступы между кнопками */
+}
+
+.button-list a {
+    display: inline-block; /* Делаем ссылку блочным элементом */
+    padding: 15px 20px; /* Отступы внутри кнопки */
+    color: white; /* Цвет текста */
+    background-color: #007BFF; /* Синий фон для кнопок */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+    width: 100%; /* Кнопки занимают всю ширину контейнера */
+}
+
+.button-list a:hover {
+    background-color: #0056b3; /* Более темный синий цвет при наведении */
+}
+
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <li>
-        <a href="about.html">О Нас</a>
-        <ul class="dropdown">
-            <li><a href="mission.html">Миссия</a></li>
-            <li><a href="history.html">История</a></li>
-            <li><a href="structure.html">Структура центра</a></li>
-            <li><a href="reports.html">Отчеты</a></li>
-            <li><a href="corporate-documents.html">Корпоративные документы</a></li>
-            <li><a href="strategic-plan.html">Стратегический план</a></li>
-            <li><a href="supervisory-board.html">Наблюдательный совет</a></li>
-            <li><a href="vacancies.html">Вакансии</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+    <nav>
+        <ul class="navbar">
+            <li>
+                <a href="about.html">О Нас</a>
+                <ul class="button-list">
+                    <li><a href="mission.html">Миссия</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="structure.html">Структура центра</a></li>
+                    <li><a href="reports.html">Отчеты</a></li>
+                    <li><a href="corporate-documents.html">Корпоративные документы</a></li>
+                    <li><a href="strategic-plan.html">Стратегический план</a></li>
+                    <li><a href="supervisory-board.html">Наблюдательный совет</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                
+            </li>
         </ul>
-    </li>
+    </nav>
 
     <div id="footer-placeholder"></div>
     <script src="script.js"></script>
