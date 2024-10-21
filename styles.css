@@ -5,22 +5,179 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+    background-color:#e0f7fa;
+;
+
 }
 
-.container {
+.container2 {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Общие стили для хедера */
+header {
+    font-weight: bold;
+
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Логотип слева, центр в середине, контакты справа */
+    align-items: center;
+    padding: 10px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+/* Контейнер для верхней части хедера */
+.top-header .container {
+    display: flex;
+    align-items: center; /* Выровнять все элементы по вертикали */
+    justify-content: space-between;
+}
+
+/* Языковой переключатель */
+.language-switcher {
+    margin-right: 20px; /* Отступ справа для отделения от логотипа */
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Обычные ссылки */
+.language-switcher a {
+    color:#0077b5; /* Цвет ссылок */
+    text-decoration: none;
+    margin: 0 5px; /* Отступ между ссылками */
+}
+
+/* Ссылка при наведении */
+.language-switcher a:hover {
+    text-decoration: underline;
+}
+
+/* Текущий язык (не ссылка) */
+.language-switcher .current-language {
+    color: white; /* Цвет текущего языка (например, белый) */
+    background-color: #0077b5; /* Фон текущего языка */
+    padding: 2px 5px; /* Внутренние отступы для аккуратности */
+    border-radius: 3px; /* Закругленные края */
+}
+
+
+/* Логотип */
+.logo {
+    margin-left: 20px; /* Отступ слева, если нужно */
+}
+
+
+/* Контакты */
+.contact-info {
+    text-align: right;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .top-header .container {
+        flex-direction: column; /* Элементы располагаются в колонку на маленьких экранах */
+        align-items: center; /* Центрирование элементов */
+    }
+
+    .language-switcher {
+        margin-right: 0;
+        margin-bottom: 10px; /* Отступ снизу на мобильных экранах */
+    }
+
+    .center-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.center-info {
+    text-align: left;
+    flex-grow: 1; /* Центр расширяется, чтобы оставаться посередине */
+}
+
+.center-info h1 {
+    font-size: 0.7em;
+    color: #0077b5;
+    margin: 0;
+}
+
+.center-info p {
+    margin: 0;
+    color:  #576074;
+    font-weight: bold;
+}
+
+.contact-info {
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.contact-info .contact-item {
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color:  #576074;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Нижняя часть с меню */
+.bottom-header {
+    background-color:#0077b5;
+    padding: 10px 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.nav-menu li a:hover {
+    background-color: #0077b5;
+    border-radius: 5px;
+}
 
 header {
-    background: linear-gradient(90deg, #12a1c5, #0e839c);
-    color: white;
+    background: linear-gradient(90deg, #dfe2e2, #e0f7fa);
+    color: #0077b5;
     padding: 20px 0;
 }
 
@@ -28,13 +185,46 @@ header h1 {
     display: inline-block;
     margin-left: 20px;
     vertical-align: middle;
-    font-size: 1.8em;
+    font-size: 1em;
 }
 
 .logo img {
     vertical-align: middle;
     border-radius: 50%;
 }
+
+/* Стили для социальных иконок в шапке */
+.social-links {
+    margin-top: 15px; /* Отступ сверху */
+    text-align: center; /* Центрируем иконки */
+}
+
+.social-links .social-icon {
+    text-decoration: none;
+    color: #12a1c5;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    color: yellow; /* Изменение цвета при наведении */
+}
+
+/* Увеличить отступ между иконками и заголовком */
+.center-info {
+    margin-bottom: 15px; /* Отступ между заголовком и иконками */
+}
+
+.center-info h1 {
+    font-size: 1em;
+    margin-bottom: 10px; /* Отступ после заголовка */
+}
+
+.center-info p {
+    font-size: 1em;
+}
+
 
 nav ul {
     list-style: none;
@@ -43,21 +233,21 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
     position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #0077b5;
     font-weight: bold;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 20px;
     transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(221, 233, 236, 0.411);
 }
 
 nav ul .dropdown {
@@ -65,11 +255,11 @@ nav ul .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: #0077b5;
     border-radius: 5px;
     min-width: 200px;
     z-index: 20;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px white;
 }
 
 nav ul .dropdown li {
@@ -77,10 +267,10 @@ nav ul .dropdown li {
 }
 
 nav ul .dropdown a {
-    color: #333;
+    color: white;
     padding: 10px 20px;
     display: block;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #12a1c5;
 }
 
 nav ul li:hover .dropdown {
@@ -88,7 +278,7 @@ nav ul li:hover .dropdown {
 }
 
 nav ul .dropdown a:hover {
-    background-color: #f5f5f5;
+    background-color: #576074;
 }
 
 /* Кнопки */
@@ -136,6 +326,21 @@ nav ul .dropdown a:hover {
     object-fit: cover;
 }
 
+.slide-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Прозрачный фон для улучшения читаемости текста */
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 80%; /* Чтобы текст не выходил за края слайда */
+}
+
 /* Секции */
 section {
     padding: 40px 0;
@@ -143,7 +348,7 @@ section {
 
 section.about-us, section.news {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
@@ -280,38 +485,6 @@ footer {
     margin-top: 20px;
 }
 
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    color:#12a1c5; /* Цвет иконок, можно заменить на другой */
-    font-size: 24px;
-    margin-right: 15px;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #12a1c5; /* Цвет иконок при наведении */
-}
-
-
-/* Стили для социальных иконок в подвале */
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links .social-icon {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.social-links .social-icon:hover {
-    color: #12a1c5; /* Изменить цвет при наведении */
-}
 
 /* Общие стили для кнопок в меню */
 nav ul li .button {
@@ -350,7 +523,7 @@ nav ul li .button {
     padding: 20px;
     background-color: #fff; /* Фон карточки */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объема */
-    border-radius: 10px;
+    border-radius: 30px;
     width: 150px; /* Ширина каждой карточки */
     transition: transform 0.3s ease; /* Анимация при наведении */
 }
@@ -403,6 +576,17 @@ nav ul li .button {
         top: 10px;
         right: 10px;
     }
+
+    /* Адаптивность для карточек */
+    .info-cards {
+        flex-direction: column; /* Строки карточек становятся колонками */
+        align-items: center; /* Центрируем карточки */
+    }
+    
+    .card {
+        flex: 1 1 100%; /* Каждая карточка занимает 100% ширины */
+        margin: 10px 0; /* Отступ между карточками по вертикали */
+    }
 }
 
 @media (max-width: 480px) {
@@ -425,7 +609,19 @@ nav ul li .button {
     nav ul li {
         margin: 10px 0;
     }
+
+    /* Адаптивность для карточек на очень маленьких экранах */
+    .info-cards {
+        padding: 0 10px; /* Добавляем небольшой отступ */
+    }
+    
+    .card {
+        flex: 1 1 100%; /* Каждая карточка занимает 100% ширины */
+        margin: 10px 0; /* Отступ между карточками по вертикали */
+        padding: 15px; /* Увеличиваем отступ внутри карточек для лучшего восприятия */
+    }
 }
+
 /* Стили для кнопок */
 .button-container {
     display: flex; /* Используем Flexbox для выравнивания */
