@@ -36,4 +36,11 @@ fetch('footer.html')
     document.getElementById('footer-placeholder').innerHTML = data;
 });
 
+// Загружаем содержимое форму из файла form.html
+fetch('form.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('form-placeholder').innerHTML = data;
+    });
+
 
