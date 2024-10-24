@@ -378,7 +378,7 @@ ul.dropdown1 a:hover {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Прозрачный фон для улучшения читаемости текста */
+    background: #555; /* Прозрачный фон для улучшения читаемости текста */
     padding: 10px 20px;
     border-radius: 5px;
     width: 80%; /* Чтобы текст не выходил за края слайда */
@@ -433,28 +433,16 @@ section.about-us, section.news {
 
 .doctor-text {
     max-width: 600px; /* Максимальная ширина текста */
+    color: #333;
 }
 
 .doctor-text p {
     margin-bottom: 10px; /* Отступ между абзацами */
     line-height: 1.5; /* Высота строки */
+    color: #555;
 }
 
 
-
-
-.news article {
-    margin-bottom: 20px;
-}
-
-.news article h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.news article p {
-    color: #666;
-}
 
 /* Мультиязычность */
 .language-toggle {
@@ -480,6 +468,7 @@ section.about-us, section.news {
     text-align: center;
     padding: 50px 0;
     background: #e3f2fd;
+    color: #333;
 }
 
 .hero h2 {
@@ -501,24 +490,35 @@ section.about-us, section.news {
 }
 .services-overview {
     padding: 30px 0;
+    color: #333;
+    display: flex; /* Используем Flexbox для центрирования */
+    flex-direction: column; /* Направление элементов — по колонкам */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    justify-content: center; /* Центрируем элементы по вертикали */
 }
 
 .services-overview h3 {
     text-align: center;
     font-size: 1.8em;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .services-overview ul {
     list-style-type: none;
-    text-align: center;
+    padding: 0; /* Убираем стандартные отступы у списка */
+    margin: 0; /* Убираем стандартные отступы у списка */
+    display: flex; /* Используем Flexbox для горизонтального размещения элементов */
+    justify-content: center; /* Центрируем элементы в списке */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при малой ширине */
 }
 
 .services-overview ul li {
-    display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px; /* Увеличен отступ между элементами для лучшего восприятия */
     font-size: 1.2em;
+    color: #333;
 }
+
 
 footer {
     background: #12a1c5;

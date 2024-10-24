@@ -1,0 +1,55 @@
+#surgery-department {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+#surgery-department h2, #surgery-department h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#surgery-department p, #surgery-department ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.staff-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 220px;
+}
+
+.staff-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.staff-member h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0077b5;
+}
+
+.staff-member p {
+    font-size: 14px;
+    color: #555;
+}
+
+.staff-member strong {
+    font-weight: bold;
+}
