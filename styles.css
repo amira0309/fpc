@@ -195,16 +195,19 @@ header h1 {
 
 /* Стили для социальных иконок в шапке */
 .social-links {
-    margin-top: 15px; /* Отступ сверху */
-    text-align: center; /* Центрируем иконки */
+    display: flex; /* Используем flexbox для выравнивания иконок */
+    align-items: center; /* Выравнивание по вертикали */
 }
 
-.social-links .social-icon {
-    text-decoration: none;
-    color: #12a1c5;
-    font-size: 24px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+.social-icon {
+    margin: 0 10px; /* Отступы между иконками */
+    color: #0077b5; /* Цвет иконок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 24px; /* Размер иконок */
+}
+
+.social-icon:hover {
+    color: #005f8d; /* Цвет при наведении */
 }
 
 .social-links .social-icon:hover {
