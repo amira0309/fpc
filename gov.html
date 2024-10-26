@@ -1,78 +1,33 @@
-
-    <link rel="stylesheet" href="styles.css">
-    <!-- Подключение иконок из Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Государственные и полезные ресурсы</title>
     <link rel="stylesheet" href="gov.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 <body>
     <h2>Государственные и полезные ресурсы</h2>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="https://www.akorda.kz" target="_blank">
-                    <img src="assets/images/akorda.png" alt="Сайт Президента РК">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://www.gov.kz/memleket/entities/dsm?lang=ru" target="_blank">
-                    <img src="assets/images/mzrk.png" alt="Сайт МЗ РК">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://www.gov.kz/memleket/entities/vko-densaulyk?lang=ru" target="_blank">
-                    <img src="assets/images/gu.png" alt="Сайт ГУ «Управление здравоохранения»">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://www.gov.kz/article/128915?lang=ru" target="_blank">
-                    <img src="assets/images/simb.jpeg" alt="Государственные символы">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://www.theglobalfund.org/en" target="_blank">
-                    <img src="assets/images/Global.jpg" alt="Проект Глобального фонда">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://www.stoptb.org/" target="_blank">
-                    <img src="assets/images/stop.jpeg" alt="Национальное партнерство Стоп ТБ">
-                </a>
-            </div>
-        </div>
+    <div class="resource-links">
+        <a href="https://www.akorda.kz" target="_blank">
+            <img src="assets/images/akorda.png" alt="Сайт Президента РК">
+        </a>
+        <a href="https://www.gov.kz/memleket/entities/dsm?lang=ru" target="_blank">
+            <img src="assets/images/mzrk.png" alt="Сайт МЗ РК">
+        </a>
+        <a href="https://www.gov.kz/memleket/entities/vko-densaulyk?lang=ru" target="_blank">
+            <img src="assets/images/gu.png" alt="Сайт ГУ «Управление здравоохранения»">
+        </a>
+        <a href="https://www.gov.kz/article/128915?lang=ru" target="_blank">
+            <img src="assets/images/simb.jpeg" alt="Государственные символы">
+        </a>
+        <a href="https://www.theglobalfund.org/en" target="_blank">
+            <img src="assets/images/Global.jpg" alt="Проект Глобального фонда">
+        </a>
+        <a href="https://www.stoptb.org/" target="_blank">
+            <img src="assets/images/stop.jpeg" alt="Национальное партнерство Стоп ТБ">
+        </a>
     </div>
-        <!-- Навигационные кнопки -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-<!-- Подключение Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        slidesPerView: 1, // По умолчанию 1 слайд на маленьких экранах
-        spaceBetween: 10, // Небольшое расстояние между слайдами
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-        },
-    });
-</script>
-
-
-
 </body>
 </html>

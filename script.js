@@ -29,6 +29,13 @@ fetch('header.html')
         document.getElementById('header-placeholder').innerHTML = data;
     });
 
+    // Загружаем содержимое gov из файла gov.html
+fetch('gov.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('gov-placeholder').innerHTML = data;
+});
+
     // Загружаем содержимое хедера из файла footer.html
 fetch('footer.html')
 .then(response => response.text())
@@ -42,5 +49,4 @@ fetch('form.html')
     .then(data => {
         document.getElementById('form-placeholder').innerHTML = data;
     });
-
 
