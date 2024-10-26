@@ -1,44 +1,43 @@
-#surgery-department {
-    padding: 40px 20px;
-    background-color: #f7f7f7;
+.department-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.department-info h2, .department-info h3 {
+    color: #0077b5;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.department-info p {
+    font-size: 16px;
+    line-height: 1.6;
     color: #333;
 }
 
-#surgery-department h2, #surgery-department h3 {
-    text-align: center;
+.department-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
     margin-bottom: 20px;
-    color: #0077b5;
 }
 
-#surgery-department p, #surgery-department ul {
+.department-info ul li {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    color: #333;
 }
 
-#surgery-department ul li::marker {
+.department-info ul li::marker {
     color: #0077b5;
 }
 
-.surgery-photo {
-    text-align: center; /* Выравнивание фото по центру */
-    margin: 20px 0; /* Отступы сверху и снизу */
+.department-info ul, .department-info p {
+    margin-bottom: 20px;
 }
-
-.surgery-photo img {
-    max-width: 300px; /* Ограничение ширины фото до 300px */
-    height: auto; /* Пропорциональное изменение высоты */
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
-}
-
-/* Адаптивность для маленьких экранов */
-@media (max-width: 768px) {
-    .surgery-photo img {
-        max-width: 80%; /* На маленьких экранах фото занимает 80% ширины */
-    }
-}
-
 
 .staff {
     display: flex;
