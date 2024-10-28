@@ -172,25 +172,46 @@
         box-shadow: 0px 0px 20px 10px rgba(102, 187, 106, 0.6);
     }
 
-    /* Адаптивные стили */
-    @media (max-width: 1024px) {
-        .status-button {
-            font-size: 14px;
-            padding: 10px;
-            display: block !important;
-            visibility: visible !important;
-        }
-    }
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .status-button {
+                font-size: 14px;
+                padding: 10px 15px;
+                bottom: 15px;
+                right: 15px;
+                border-radius: 40px; /* Уменьшен радиус закругления */
+            }
 
-    @media (max-width: 600px) {
-        .status-button {
-            bottom: 0;
-            right: 0;
-            border-radius: 0;
-            display: block !important;
-            visibility: visible !important;
+            .saqtandyry-status-form-container {
+                width: 90%;
+                height: 80%;
+            }
         }
-    }
+
+        @media (max-width: 600px) {
+            .status-button {
+                width: 90%;
+                left: 5%;
+                bottom: 15px;
+                right: 5%;
+                padding: 10px;
+                font-size: 13px;
+                border-radius: 40px; /* Уменьшен радиус закругления */
+            }
+
+            .saqtandyry-status-form-container {
+                width: 95%;
+                height: 85%;
+                top: 5%;
+            }
+        }
+
+        /* Стили для iframe внутри формы */
+        #saqtandyry-form {
+            width: 95%;
+            height: calc(100% - 40px); /* Вычитание для учета кнопки закрытия */
+            border: none;
+        }
 
     </style>
 </head>
