@@ -50,3 +50,22 @@ fetch('form.html')
         document.getElementById('form-placeholder').innerHTML = data;
     });
 
+    // Загружаем содержимое кнопки застрахованности из файла saqtandyry.html
+fetch('saqtandyry.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('saqtandyry-placeholder').innerHTML = data;
+});
+
+     // Функция для открытия формы
+    function openForm() {
+        document.getElementById('saqtandyry-status-form-id').style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Отключить прокрутку страницы
+    }
+
+    // Функция для закрытия формы
+    function closeForm() {
+        document.getElementById('saqtandyry-status-form-id').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Включить прокрутку страницы
+    }
+
