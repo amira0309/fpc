@@ -10,7 +10,8 @@
         .status-button {
             background: #61a832;
             border: 2px solid #61a832;
-            display: block;
+            display: block !important;
+    visibility: visible !important;
             position: fixed;
             bottom: 10px;
             right: 10px;
@@ -29,6 +30,7 @@
             animation: saqtandyry-status-opsimple 3s infinite;
             -webkit-animation: saqtandyry-status-an linear 3s infinite;
             animation: saqtandyry-status-an linear 3s infinite;
+            visibility: visible;
         }
 
         @-webkit-keyframes saqtandyry-status-an {
@@ -109,6 +111,7 @@
     }
 }
 
+
         .saqtandyry-status-logo {
         width: 20px; /* или любой другой размер */
         height: auto; /* чтобы сохранить пропорции */
@@ -164,25 +167,29 @@
         vertical-align: middle; /* Центрирует по вертикали */
     }
 
-    @media (max-width: 768px) {
-  .status-button {
-    display: block;
-    font-size: 14px; /* Уменьшите текст на мобильных, если нужно */
-    padding: 10px; /* Увеличьте отступы для удобства на сенсорных экранах */
-  }
-}
+    .status-button:hover {
+        background-color: #66bb6a;
+        box-shadow: 0px 0px 20px 10px rgba(102, 187, 106, 0.6);
+    }
+
+    /* Адаптивные стили */
+    @media (max-width: 1024px) {
+        .status-button {
+            font-size: 14px;
+            padding: 10px;
+            display: block !important;
+            visibility: visible !important;
+        }
+    }
 
     @media (max-width: 600px) {
-            .status-button {
-                width: 100%; /* Кнопка занимает всю ширину на малых экранах */
-            }
+        .status-button {
+            bottom: 0;
+            right: 0;
+            border-radius: 0;
         }
+    }
 
-        @media (max-width: 400px) {
-            #saqtandyry-status-form-id {
-                width: 90%; /* Ширина формы на очень маленьких экранах */
-            }
-        }
     </style>
 </head>
 <body>
