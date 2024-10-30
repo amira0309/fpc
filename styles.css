@@ -332,7 +332,7 @@ ul.dropdown1 a:hover {
     display: inline-block;
     padding: 10px 20px;
     color: white;
-    background-color: #12a1c5;
+    background-color: #61a832;
     text-align: center;
     border-radius: 30px;
     text-decoration: none;
@@ -340,7 +340,8 @@ ul.dropdown1 a:hover {
 }
 
 .btn:hover {
-    background-color: #0e839c;
+    background-color: #213812;  
+
 }
 
 .slider {
@@ -348,6 +349,27 @@ ul.dropdown1 a:hover {
     width: 100%;
     height: 400px;
     overflow: hidden;
+}
+
+/* Стиль кнопки */
+.slide-button {
+    position: absolute;
+    bottom: 20px; /* Отступ от нижнего края */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #61a832; /* Цвет кнопки с прозрачностью */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.slide-button:hover {
+    background-color:#213812; /* Цвет кнопки при наведении */
 }
 
 .slide {
@@ -486,10 +508,13 @@ section.about-us, section.news {
 
 .hero .btn {
     padding: 10px 20px;
-    background: #12a1c5;
+    background: #61a832;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+}
+.hero .btn :hover {
+    background-color: #213812;  
 }
 .services-overview {
     padding: 30px 0;
@@ -534,7 +559,7 @@ footer {
 
 /* Общие стили для кнопок в меню */
 nav ul li .button {
-    background-color: #12a1c5;  /* Синий фон */
+    background-color: #61a832;  
     color: #fff;  /* Белый текст */
     padding: 10px 20px;
     text-decoration: none;
@@ -545,7 +570,7 @@ nav ul li .button {
 
 /* Стили при наведении */
 nav ul li .button:hover {
-    background-color: #12a1c5;  /* Темнее синий цвет при наведении */
+    background-color: #213812;  
 }
 
 /* Для выделения кнопок от остального меню */
@@ -700,7 +725,7 @@ nav ul li .button {
 }
 
 .button {
-    background-color: #0077b5;
+    background-color: #61a832;
     color: white;
     padding: 10px 15px;
     margin: 5px 0; /* Отступы между кнопками */
