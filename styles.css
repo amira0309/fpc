@@ -1,6 +1,5 @@
 * {
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -36,7 +35,7 @@ header {
 }
 
 .logo img {
-    max-width: 100px;
+    max-width: 50px;
 }
 
 /* Контейнер для верхней части хедера */
@@ -214,10 +213,6 @@ header h1 {
     color: yellow; /* Изменение цвета при наведении */
 }
 
-/* Увеличить отступ между иконками и заголовком */
-.center-info {
-    margin-bottom: 15px; /* Отступ между заголовком и иконками */
-}
 
 .center-info h1 {
     font-size: 1em;
