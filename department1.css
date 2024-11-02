@@ -26,7 +26,7 @@
 }
 
 .surgery-photo img {
-    max-width: 300px; /* Ограничение ширины фото до 300px */
+    max-width: 500px; /* Ограничение ширины фото до 300px */
     height: auto; /* Пропорциональное изменение высоты */
     border-radius: 10px; /* Закругленные углы */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
