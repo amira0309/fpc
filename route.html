@@ -11,94 +11,30 @@
  <!-- Подключаем иконку (favicon) -->
  <link rel="icon" href="assets/images/LOGO.jpg" type="image/x-icon">
  <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .services-section {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .service-item {
-            margin-bottom: 20px;
-        }
-        .service-item h3 {
-            color: #2a9d8f;
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-        .service-item p {
-            margin: 5px 0;
-            font-size: 0.95em;
-        }
-        .service-item .address,
-        .service-item .time,
-        .service-item .phone {
-            display: block;
-            margin-top: 2px;
-            color: #555;
-        }
-    </style>
+ <style>
+    .photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .photo img {
+        max-width: 100%;  /* Ограничивает ширину до 100% контейнера */
+        height: auto;    /* Автоматически сохраняет пропорции */
+        border-radius: 8px; /* Закругленные углы (по желанию) */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление тени */
+    }
+</style>
 </head>
 <body>
-    <div id="header-placeholder"></div>
 
-<div class="services-section">
-    <h2>Консультативно-диагностические услуги</h2>
+<div id="header-placeholder"></div>
 
-    <div class="service-item">
-        <h3>Флюорография, рентгенография органов грудной клетки взрослого населения</h3>
-        <p class="address">Адрес: ул. Рабочая, 6</p>
-        <p class="time">Время работы: с 8.30 – 14.00</p>
-        <p class="phone">Телефон ресепшена: 77-27-04</p>
-    </div>
-
-    <div class="service-item">
-        <h3>Кабинет забора мокроты</h3>
-        <p class="address">Адрес: ул. Рабочая, 6</p>
-        <p class="time">Время работы: с 8.00 – 10.00</p>
-        <p class="phone">Телефон ресепшена: 77-27-04</p>
-    </div>
-
-    <div class="service-item">
-        <h3>Проведение иммунологических тестов (диаскинтест, квантифероновый тест)</h3>
-        <p class="address">Адрес: ул. Белинского, 39</p>
-        <p class="time">Диаскинтест: каждый понедельник и вторник, с 9.00 – 11.00</p>
-        <p class="time">Квантифероновый тест: каждая среда, с 9.00 – 10.00</p>
-        <p class="phone">Телефон ресепшена: 22-28-89</p>
-    </div>
-
-    <div class="service-item">
-        <h3>Прием взрослого населения (фтизиатр)</h3>
-        <p class="address">Адрес: ул. Рабочая, 6</p>
-        <p class="time">Время работы: с 12.00 – 15.00</p>
-        <p class="phone">Телефон ресепшена: 77-27-04</p>
-    </div>
-
-    <div class="service-item">
-        <h3>Прием детского населения (фтизиопедиатр)</h3>
-        <p class="address">Адрес: ул. Белинского, 39</p>
-        <p class="time">Время работы: с 8.00 – 15.30</p>
-        <p class="phone">Телефон ресепшена: 22-28-89</p>
-    </div>
-
-    <div class="service-item">
-        <h3>Проведение фибробронхоскопических процедур взрослого населения</h3>
-        <p class="address">Адрес: с. Опытное поле, ул. Локомотивная, 3\1</p>
-        <p class="time">Время работы: с 8.00 – 12.00</p>
-        <p class="phone">Телефон: 54-48-01</p>
-    </div>
+<div class="photo">
+    <img src="assets/images/marshrut_rus.jpg" alt="Маршрут пациента">
 </div>
 <div id="saqtandyry-placeholder"></div>
 <div id="gov-placeholder"></div>
-
 <!-- Подвал сайта -->
 
 <div id="footer-placeholder"></div>
