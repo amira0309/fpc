@@ -24,18 +24,19 @@ header {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between; /* Логотип слева, центр в середине, контакты справа */
-    align-items: center;
     padding: 10px 0;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
+.logo-info {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 1200px;
+    margin-left: 5px;
+}
 .logo img {
-    max-width: 50px;
+    max-width: 30px;
 }
 
 /* Контейнер для верхней части хедера */
@@ -75,7 +76,7 @@ header {
 
 /* Логотип */
 .logo {
-    margin-left: 20px; /* Отступ слева, если нужно */
+    margin-bottom: 10px; 
 }
 
 
@@ -114,7 +115,7 @@ header {
 
 .center-info h1 {
     font-size: 0.7em;
-    color: #0077b5;
+    color: #012d61;
     margin: 0;
 }
 
@@ -544,7 +545,7 @@ section.about-us, section.news {
 
 
 footer {
-    background: #12a1c5;
+    background:  #012d61;
     color: #fff;
     text-align: center;
     padding: 20px 0;
