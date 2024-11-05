@@ -207,13 +207,13 @@ header {
 }
 
 .nav-menu li {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
 .nav-menu li {
-    margin: 0 10px;
+    margin: 0 0px;
 }
 
 .nav-menu li a {

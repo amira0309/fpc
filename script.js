@@ -70,7 +70,30 @@ fetch('saqtandyry.html')
     }
 
     function toggleMenu() {
-        document.querySelector('.nav-menu-container').classList.toggle('active');
+        const menu = document.querySelector('.nav-menu-container');
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
     }
+    
+    function showSubMenu(subMenu) {
+        const allDropdowns = document.querySelectorAll('.dropdown');
+        allDropdowns.forEach(dropdown => dropdown.style.display = 'none'); // Скрываем все подменю
+        subMenu.style.display = 'block'; // Показываем выбранное подменю
+    }
+    
+   // Для подменю при клике на родительский элемент
+document.querySelectorAll('.has-submenu > a').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault(); // Предотвращаем переход по ссылке
+        const subMenu = this.nextElementSibling; // Получаем подменю
+        subMenu.style.display = (subMenu.style.display === 'block') ? 'none' : 'block'; // Открыть/закрыть подменю
+    });
+});
+
+// Кнопка "Назад" скрывает подменю
+document.querySelector('.back-button').addEventListener('click', function() {
+    const allDropdowns = document.querySelectorAll('.dropdown, .dropdown1');
+    allDropdowns.forEach(dropdown => dropdown.style.display = 'none'); // Скрываем все подменю
+});
+
     
     

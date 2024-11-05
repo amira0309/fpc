@@ -9,17 +9,22 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение элементов */
     justify-content: center; /* Центрирование содержимого по вертикали */
     align-items: center; /* Центрирование содержимого по горизонтали */
-    max-width: 500px; /* Максимальная ширина контейнера */
     width: 100%; /* Ширина контейнера */
 }
 
 h1 {
     text-align: center;
     color: #0077b5;
+}
+
+/* Стили для родительского контейнера формы */
+.form-container {
+    display: flex; /* Включаем flexbox */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    min-height: 100vh; /* Минимальная высота 100% высоты видимой области */
 }
 
 /* Стили для формы */
@@ -29,7 +34,9 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%; /* Занять всю ширину контейнера */
+    max-width: 600px; /* Максимальная ширина формы */
 }
+
 
 label {
     display: block;

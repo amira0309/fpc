@@ -5,32 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О центре - Фтизиопульмонологический центр</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
- .button-list {
-    list-style-type: none; /* Убираем маркеры */
-    padding: 0; /* Убираем внутренние отступы */
-    margin: 0; /* Убираем внешние отступы */
-}
+      <!-- Подключение иконок из Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <!-- Подключаем иконку (favicon) -->
+      <link rel="icon" href="assets/images/LOGO.jpg" type="image/x-icon">
+      <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
+  
+     <style>
+        .navbar {
+            display: flex; /* Используем flex для отображения кнопок */
+            flex-direction: column; /* Размещаем кнопки вертикально */
+            padding: 0; /* Убираем отступы */
+            margin: 0; /* Убираем внешние отступы */
+        }
 
-.button-list li {
-    margin: 10px 0; /* Отступы между кнопками */
-}
+        .navbar li {
+            list-style-type: none; /* Убираем маркеры */
+            margin: 5px 0; /* Уменьшаем отступы между кнопками */
+        }
 
-.button-list a {
-    display: inline-block; /* Делаем ссылку блочным элементом */
-    padding: 15px 20px; /* Отступы внутри кнопки */
-    color: white; /* Цвет текста */
-    background-color: #007BFF; /* Синий фон для кнопок */
-    text-decoration: none; /* Убираем подчеркивание */
-    border-radius: 5px; /* Закругленные углы */
-    transition: background-color 0.3s; /* Плавный переход цвета фона */
-    width: 100%; /* Кнопки занимают всю ширину контейнера */
-}
+        .navbar a {
+            display: inline-block; /* Делаем ссылку блочным элементом */
+            padding: 10px 15px; /* Уменьшаем отступы внутри кнопки */
+            color: white; /* Цвет текста */
+            background-color: #007BFF; /* Синий фон для кнопок */
+            text-decoration: none; /* Убираем подчеркивание */
+            border-radius: 5px; /* Закругленные углы */
+            transition: background-color 0.3s; /* Плавный переход цвета фона */
+            width: 100%; /* Кнопки занимают всю ширину контейнера */
+            font-size: 14px; /* Уменьшаем размер шрифта */
+        }
 
-.button-list a:hover {
-    background-color: #0056b3; /* Более темный синий цвет при наведении */
-}
-
+        .navbar a:hover {
+            background-color: #0056b3; /* Более темный синий цвет при наведении */
+        }
     </style>
 </head>
 <body>
@@ -38,23 +46,19 @@
 
     <nav>
         <ul class="navbar">
-            <li>
-                <a href="about.html">О Нас</a>
-                <ul class="button-list">
-                    <li><a href="mission.html">Миссия</a></li>
-                    <li><a href="history.html">История</a></li>
-                    <li><a href="structure.html">Структура центра</a></li>
-                    <li><a href="reports.html">Отчеты</a></li>
-                    <li><a href="corporate-documents.html">Корпоративные документы</a></li>
-                    <li><a href="strategic-plan.html">Стратегический план</a></li>
-                    <li><a href="supervisory-board.html">Наблюдательный совет</a></li>
-                    <li><a href="vacancies.html">Вакансии</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                </ul>
-                
-            </li>
+            <li><a href="mission.html">Миссия</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="structure.html">Структура центра</a></li>
+            <li><a href="administration.html">Руководство</a></li>
+            <li><a href="reports.html">Отчеты</a></li>
+            <li><a href="corporate-documents.html">Корпоративные документы</a></li>
+            <li><a href="strategic-plan.html">Стратегический план</a></li>
+            <li><a href="supervisory-board.html">Наблюдательный совет</a></li>
+            <li><a href="vacancies.html">Вакансии</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
+
 
     <div id="footer-placeholder"></div>
     <script src="script.js"></script>
