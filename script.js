@@ -69,3 +69,8 @@ fetch('saqtandyry.html')
         document.body.style.overflow = 'auto'; // Включить прокрутку страницы
     }
 
+    function toggleMenu() {
+        document.querySelector('.nav-menu-container').classList.toggle('active');
+    }
+    
+    
