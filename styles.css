@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;;
     background-color:#e0f7fa;
 ;
 
@@ -20,12 +20,10 @@ body {
 header {
     font-weight: bold;
 
-    padding-bottom: 20px;
 }
 
 .container {
     padding: 10px 0;
-    width: 90%;
     max-width: 1200px;
 }
 
@@ -55,7 +53,7 @@ header {
 
 /* Обычные ссылки */
 .language-switcher a {
-    color:#0077b5; /* Цвет ссылок */
+    color:#012d61; /* Цвет ссылок */
     text-decoration: none;
     margin: 0 5px; /* Отступ между ссылками */
 }
@@ -68,7 +66,7 @@ header {
 /* Текущий язык (не ссылка) */
 .language-switcher .current-language {
     color: white; /* Цвет текущего языка (например, белый) */
-    background-color: #0077b5; /* Фон текущего языка */
+    background-color: #012d61; /* Фон текущего языка */
     padding: 2px 5px; /* Внутренние отступы для аккуратности */
     border-radius: 3px; /* Закругленные края */
 }
@@ -127,7 +125,7 @@ header {
 
 .contact-info {
     text-align: right;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .contact-info .contact-item {
@@ -146,15 +144,15 @@ header {
 
 /* Нижняя часть с меню */
 .bottom-header {
-    background-color:#0077b5;
-    padding: 10px 0;
+    background-color: #e0f7fa;
+
 }
 
 .nav-menu {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
     font-size: 0.9em;
 }
@@ -164,21 +162,21 @@ header {
 }
 
 .nav-menu li a {
-    color: white;
+    color: #012d61;
     text-decoration: none;
     font-weight: bold;
     padding: 5px;
 }
 
 .nav-menu li a:hover {
-    background-color: #0077b5;
     border-radius: 5px;
+    text-decoration: #12a1c5;
 }
 
 header {
     background: linear-gradient(90deg, #dfe2e2, #e0f7fa);
-    color: #0077b5;
-    padding: 20px 0;
+    color: #012d61;
+
 }
 
 header h1 {
@@ -201,13 +199,13 @@ header h1 {
 
 .social-icon {
     margin: 0 10px; /* Отступы между иконками */
-    color: #0077b5; /* Цвет иконок */
+    color: #012d61; /* Цвет иконок */
     text-decoration: none; /* Убираем подчеркивание */
     font-size: 24px; /* Размер иконок */
 }
 
 .social-icon:hover {
-    color: #005f8d; /* Цвет при наведении */
+    color: #012d61; /* Цвет при наведении */
 }
 
 .social-links .social-icon:hover {
@@ -238,7 +236,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #0077b5;
+    color: #012d61;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 20px;
@@ -254,7 +252,7 @@ nav ul .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #0077b5;
+    background-color: #012d61;
     border-radius: 5px;
     min-width: 200px;
     z-index: 20;
@@ -269,7 +267,7 @@ nav ul .dropdown a {
     color: white;
     padding: 10px 20px;
     display: block;
-    border-bottom: 1px solid #12a1c5;
+    border-bottom: 1px solid #012d61;
 }
 
 nav ul li:hover .dropdown {
@@ -287,7 +285,7 @@ ul.dropdown1 {
     top: 0;
     left: 100%; /* Отображать подменю справа */
     padding-left: 0;
-    background-color: #0077b5;
+    background-color: #012d61;
     border-radius: 5px;
     min-width: 200px;
     z-index: 20;
@@ -314,12 +312,12 @@ ul.dropdown1 a {
 
 /* Дополнительные стили для красивого отображения */
 li.has-submenu > a {
-    background-color: #0077b5;
+    background-color: #012d61;
     color: white; /* Цвет текста белый */
 }
 
 ul.dropdown1 a:hover {
-    background-color: #0056a3; /* Темнее фон при наведении */
+    background-color: #012d61; /* Темнее фон при наведении */
     color: white; /* Цвет текста остается белым */
 }
 
@@ -328,15 +326,16 @@ ul.dropdown1 a:hover {
     display: inline-block;
     padding: 10px 20px;
     color: white;
-    background-color: #61a832;
+    background-color: #012d61;
     text-align: center;
     border-radius: 30px;
     text-decoration: none;
     transition: background 0.3s;
+    justify-content: center;
 }
 
 .btn:hover {
-    background-color: #213812;  
+    background-color: #12a1c5;  
 
 }
 
@@ -434,7 +433,7 @@ section.about-us, section.news {
 
 .available-doctor h2 {
     text-align: center;
-    color: #0077b5;
+    color: #012d61;
     margin-bottom: 15px; /* Отступ снизу */
 }
 
@@ -525,7 +524,7 @@ section.about-us, section.news {
     text-align: center;
     font-size: 1.8em;
     margin-bottom: 20px;
-    color: #333;
+    color: #012d61;
 }
 
 .services-overview ul {
