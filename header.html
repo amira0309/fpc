@@ -6,7 +6,9 @@
  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
  <script src="/js/google-translate.js"></script>
  <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+ <style>
 
+</style>
 <header>
     <div class="top-header">
         <div class="container">
@@ -49,42 +51,44 @@
                     <a href="index_kk.html">Қаз</a>
                 </div>
                 <div class="button-container"><a href="contacts.html" class="btn">КОНТАКТЫ</a></div>
+        
         </div>
-          <!-- Иконка гамбургера для мобильной версии -->
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
+
         </div>
-        </div>
+
+
     </div>
 
-        <!-- Меню навигации -->
-        <!-- Нижний блок с меню и социальными иконками -->
-    <div class="bottom-header">
-        <nav class="nav-menu-container">
+        <div class="bottom-header">
+   <!-- Иконка гамбургера для мобильной версии -->
+   <div class="hamburger" onclick="toggleMobileMenu()">&#9776;</div>
+  
+        <nav class="nav-menu-container" >
+            <div class="close-menu" onclick="toggleMobileMenu()">&times;</div>
             <ul class="nav-menu">
                 <li><a href="index.html">Главная</a></li>
-                <li>
-                    <a href="about.html">О Нас</a>
+                <li class="has-dropdown">
+                    <a href="about.html"onclick="toggleSubmenu(event)">О Нас</a>
                     <ul class="dropdown">
                         <li><a href="mission.html">Миссия</a></li>
                         <li><a href="history.html">История</a></li>
-                        <li class="has-submenu">
-                            <a href="structure.html">Структура центра</a>
+                        <li class="has-dropdown">
+                            <a href="structure.html" onclick="toggleSubmenu(event)">Структура центра </a>
                             <ul class="dropdown1">
                                 <li><a href="administration.html">Руководство</a></li>
-                                <li><a href="structure.html">Организационная <br> структура</a></li>
+                                <li><a href="structure.html">Организационная структура</a></li>
                             </ul>
+                        </li>
                         <li><a href="reports.html">Отчеты</a></li>
                         <li><a href="corporate-documents.html">Корпоративные документы</a></li>
-                        </li>
                         <li><a href="strategic-plan.html">Стратегический план</a></li>
                         <li><a href="supervisory-board.html">Наблюдательный совет</a></li>
                         <li><a href="vacancies.html">Вакансии</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </li>
-                    <li>
-                        <a href="departments.html">Отделения</a>
+                    <li class="has-dropdown">
+                        <a href="departments.html" onclick="toggleSubmenu(event)">Отделения</a>
                         <ul class="dropdown">
                             <li><a href="department1.html">Отделение легочной хирургии, внелегочного туберкулеза и восстановительного лечения</a></li>
                             <li><a href="department2.html">Отделение терапии и восстановительного лечения</a></li>
@@ -96,26 +100,22 @@
                             <li><a href="department8.html">Ситуационный центр </a></li>
                         </ul>
                     </li>
-                    <li><a href="patients.html">Пациенту</a>
+                    <li class="has-dropdown">
+                        <a href="patients.html"onclick="toggleSubmenu(event)">Пациенту</a>
                         <ul class="dropdown">
-                            <div class="dropdown-columns">
                         <li><a href="consult.html">Консультативно-диагностические услуги </a></li>
                         <li><a href="price.html">Прейскурант платных услуг </a></li>
                         <li><a href="route.html">Маршрут пациента при подозрении на туберкулез</a></li>
                         <li><a href="hospital.html">Правила госпитализации</a></li>
                         <li><a href="order.html">Правила внутреннего распорядка</a></li>
                         <li><a href="quality.html">Служба контроля качества медицинских услуг и безопасности пациентов </a></li>
-                            </div>
-                        <div class="dropdown-columns">
                         <li><a href="tuberkulez.html">Все о туберкулезе</a></li>
                         <li><a href="memo.html">Памятка больному туберкулезом </a></li>
                         <li><a href="question.html">Часто задаваемые вопросы </a></li>
                         <li><a href="oneimpact.html">Мобильное приложение OneImpact Kazakhstan </a></li>
                         <li><a href="phone.html">Контакты уполномоченных органов</a></li>
-                        </div>
                     </ul>
                     </li>
-
                     <li><a href="news.html">Новости</a></li>
                     <li><a href="custom.html">Государственные закупки</a></li>
                 <li><a href="osms.html">ОСМС</a></li>
@@ -123,8 +123,5 @@
         </nav>
     </div>
 
-
-    
-    <script src="google-translate.js"></script>
 <script src="script.js"></script>
 </header>

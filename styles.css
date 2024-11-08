@@ -142,91 +142,118 @@ header {
     text-decoration: underline;
 }
 
-/* Нижняя часть с меню */
-.bottom-header {
-    background-color: #e0f7fa;
-
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px;
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-size: 0.9em;
-}
-
-/* Стили для иконки гамбургера */
-.hamburger-icon {
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 10;
-}
-
-/* Иконка гамбургера всегда видима */
-.hamburger-icon {
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 1000;
-}
-
-/* Скрыть меню по умолчанию */
-.nav-menu-container {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #fff;
-    width: 100%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-/* Показать меню при добавлении класса active */
-.nav-menu-container.active {
-    display: block;
-}
-
-/* Вертикальное отображение элементов меню */
-.nav-menu {
-    flex-direction: column;
     padding: 0;
 }
 
-.nav-menu li {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+.nav-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Гамбургер и кнопка закрытия */
+.hamburger, .close-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    display: none; /* По умолчанию скрыты на десктопе */
+}
+
+/* Навигационное меню */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
 }
 
 .nav-menu li {
-    padding: 5px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+    position: relative;
 }
 
-.nav-menu li {
-    margin: 0 0px;
-}
-
-.nav-menu li a {
-    color: #012d61;
+.nav-menu a {
+    color: #333;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
-.nav-menu li a:hover {
-    border-radius: 5px;
-    text-decoration: #12a1c5;
+.nav-menu a:hover {
+    color: #0066cc;
 }
+
+/* Подменю */
+.dropdown, .dropdown1 {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+/* Позиционирование основного подменю на десктопе */
+.dropdown {
+    top: 100%;
+    left: 0;
+}
+
+/* Позиционирование вложенного подменю справа от основного подменю на десктопе */
+.dropdown1 {
+    top: 0;
+    left: 100%;
+}
+
+/* Показ подменю по клику */
+.show > .dropdown, .nested-show > .dropdown1 {
+    display: block;
+    opacity: 1;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Показываем гамбургер только на мобильных */
+    }
+    .close-menu {
+        display: block; /* Показываем кнопку закрытия только на мобильных */
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+    .nav-menu-container {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        padding-top: 60px;
+        z-index: 1000;
+    }
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* Подменю и вложенное подменю располагаются снизу основного меню на мобильных */
+    .dropdown, .dropdown1 {
+        position: static;
+        padding-left: 20px;
+    }
+}
+
 
 header {
     background: linear-gradient(90deg, #dfe2e2, #e0f7fa);
@@ -277,104 +304,6 @@ header h1 {
     font-size: 1em;
 }
 
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav ul li {
-    margin: 0 10px;
-    position: relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #012d61;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: background 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: rgba(221, 233, 236, 0.411);
-}
-
-nav ul .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #012d61;
-    border-radius: 5px;
-    min-width: 200px;
-    z-index: 20;
-    box-shadow: 0 8px 16px white;
-}
-
-nav ul .dropdown li {
-    margin: 0;
-}
-
-nav ul .dropdown a {
-    color: white;
-    padding: 10px 20px;
-    display: block;
-    border-bottom: 1px solid #012d61;
-}
-
-nav ul li:hover .dropdown {
-    display: block;
-}
-
-nav ul .dropdown a:hover {
-    background-color: #576074;
-}
-
-/* Стили для подменю */
-ul.dropdown1 {
-    display: none; /* По умолчанию подменю скрыто */
-    position: absolute;
-    top: 0;
-    left: 100%; /* Отображать подменю справа */
-    padding-left: 0;
-    background-color: #012d61;
-    border-radius: 5px;
-    min-width: 200px;
-    z-index: 20;
-    box-shadow: 0 8px 16px white;
-}
-
-ul.dropdown1 li {
-    display: block;
-}
-
-/* Показ подменю при наведении */
-li.has-submenu:hover ul.dropdown1 {
-    display: block;
-}
-
-ul.dropdown1 a {
-    white-space: nowrap; /* Чтобы текст не переносился на новую строку */
-    width: 200px;
-    color: white; /* Цвет текста белый */
-    padding: 10px;
-    display: block; /* Чтобы ссылка занимала весь блок */
-    text-align: left;
-}
-
-/* Дополнительные стили для красивого отображения */
-li.has-submenu > a {
-    background-color: #012d61;
-    color: white; /* Цвет текста белый */
-}
-
-ul.dropdown1 a:hover {
-    background-color: #012d61; /* Темнее фон при наведении */
-    color: white; /* Цвет текста остается белым */
-}
 
 /* Кнопки */
 .btn {
