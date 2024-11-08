@@ -162,3 +162,30 @@ function scrollToTop() {
     behavior: "smooth"
   });
 }
+
+// Функция для загрузки новостей из файла JSON
+function loadNews() {
+    fetch('news.json')
+        .then(response => response.json())
+        .then(data => {
+            const newsPlaceholder = document.getElementById('news-placeholder');
+            data.forEach(news => {
+                // Создаём HTML для каждой карточки новости
+                const newsCard = document.createElement('div');
+                newsCard.classList.add('news-card');
+                newsCard.innerHTML = `
+                    <img src="${news.image}" alt="Изображение новости" class="news-card-image">
+                    <div class="news-card-content">
+                        <a href="${news.link}" class="news-card-title">${news.title}</a>
+                        <p class="news-card-date">${news.date}</p>
+                    </div>
+                `;
+                // Добавляем карточку в контейнер
+                newsPlaceholder.appendChild(newsCard);
+            });
+        })
+        .catch(error => console.error('Ошибка загрузки новостей:', error));
+}
+
+// Вызов функции при загрузке страницы
+window.onload = loadNews;
