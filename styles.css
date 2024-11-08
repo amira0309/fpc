@@ -526,13 +526,11 @@ section.about-us, section.news {
     color: #333;
 }
 
-
-footer {
-    background:  #012d61;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+/* Общий стиль */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
