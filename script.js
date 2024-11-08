@@ -56,6 +56,17 @@ fetch('saqtandyry.html')
 .then(data => {
     document.getElementById('saqtandyry-placeholder').innerHTML = data;
 });
+   // Функция для открытия формы
+   function openForm() {
+    document.getElementById('saqtandyry-status-form-id').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Отключить прокрутку страницы
+}
+
+// Функция для закрытия формы
+function closeForm() {
+    document.getElementById('saqtandyry-status-form-id').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Включить прокрутку страницы
+}
 
 // Открытие и закрытие мобильного меню
 function toggleMobileMenu() {
@@ -130,3 +141,24 @@ document.querySelectorAll('.dropdown .has-dropdown > a').forEach(anchor => {
     anchor.addEventListener('click', toggleNestedSubmenu);
 });
 
+// Показать или скрыть кнопку при прокрутке
+window.onscroll = function () {
+  toggleScrollToTopButton();
+};
+
+function toggleScrollToTopButton() {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+// Функция для прокрутки вверх
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
