@@ -1,0 +1,844 @@
+* {
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;;
+    background-color:#e0f7fa;
+;
+
+}
+
+.container2 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Общие стили для хедера */
+header {
+    font-weight: bold;
+
+}
+
+.container {
+    padding: 10px 0;
+    max-width: 1200px;
+}
+
+.logo-info {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 1200px;
+    margin-left: 5px;
+}
+.logo img {
+    max-width: 30px;
+}
+
+/* Контейнер для верхней части хедера */
+.top-header .container {
+    display: flex;
+    align-items: center; /* Выровнять все элементы по вертикали */
+    justify-content: space-between;
+}
+
+/* Языковой переключатель */
+.language-switcher {
+    margin-right: 20px; /* Отступ справа для отделения от логотипа */
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Обычные ссылки */
+.language-switcher a {
+    color:#012d61; /* Цвет ссылок */
+    text-decoration: none;
+    margin: 0 5px; /* Отступ между ссылками */
+}
+
+/* Ссылка при наведении */
+.language-switcher a:hover {
+    text-decoration: underline;
+}
+
+/* Текущий язык (не ссылка) */
+.language-switcher .current-language {
+    color: white; /* Цвет текущего языка (например, белый) */
+    background-color: #012d61; /* Фон текущего языка */
+    padding: 2px 5px; /* Внутренние отступы для аккуратности */
+    border-radius: 3px; /* Закругленные края */
+}
+
+
+/* Логотип */
+.logo {
+    margin-bottom: 10px; 
+}
+
+
+/* Контакты */
+.contact-info {
+    text-align: right;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .top-header .container {
+        flex-direction: column; /* Элементы располагаются в колонку на маленьких экранах */
+        align-items: center; /* Центрирование элементов */
+    }
+
+    .language-switcher {
+        margin-right: 0;
+        margin-bottom: 10px; /* Отступ снизу на мобильных экранах */
+    }
+
+    .center-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.center-info {
+    text-align: left;
+    flex-grow: 1; /* Центр расширяется, чтобы оставаться посередине */
+}
+
+.center-info h1 {
+    font-size: 0.7em;
+    color: #012d61;
+    margin: 0;
+}
+
+.center-info p {
+    margin: 0;
+    color:  #576074;
+    font-weight: bold;
+}
+
+.contact-info {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.contact-info .contact-item {
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color:  #576074;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Гамбургер и кнопка закрытия */
+.hamburger, .close-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    display: none; /* По умолчанию скрыты на десктопе */
+}
+
+/* Навигационное меню */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #0066cc;
+}
+
+/* Подменю */
+.dropdown, .dropdown1 {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+/* Позиционирование основного подменю на десктопе */
+.dropdown {
+    top: 100%;
+    left: 0;
+}
+
+/* Позиционирование вложенного подменю справа от основного подменю на десктопе */
+.dropdown1 {
+    top: 0;
+    left: 100%;
+}
+
+/* Показ подменю по клику */
+.show > .dropdown, .nested-show > .dropdown1 {
+    display: block;
+    opacity: 1;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Показываем гамбургер только на мобильных */
+    }
+    .close-menu {
+        display: block; /* Показываем кнопку закрытия только на мобильных */
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+    .nav-menu-container {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        padding-top: 60px;
+        z-index: 1000;
+    }
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* Подменю и вложенное подменю располагаются снизу основного меню на мобильных */
+    .dropdown, .dropdown1 {
+        position: static;
+        padding-left: 20px;
+    }
+}
+
+
+header {
+    background: linear-gradient(90deg, #dfe2e2, #e0f7fa);
+    color: #012d61;
+
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+.logo img {
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+/* Стили для социальных иконок в шапке */
+.social-links {
+    display: flex; /* Используем flexbox для выравнивания иконок */
+    align-items: center; /* Выравнивание по вертикали */
+}
+
+.social-icon {
+    margin: 0 10px; /* Отступы между иконками */
+    color: #012d61; /* Цвет иконок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 24px; /* Размер иконок */
+}
+
+.social-icon:hover {
+    color: #012d61; /* Цвет при наведении */
+}
+
+.social-links .social-icon:hover {
+    color: yellow; /* Изменение цвета при наведении */
+}
+
+
+.center-info h1 {
+    font-size: 1em;
+    margin-bottom: 10px; /* Отступ после заголовка */
+}
+
+.center-info p {
+    font-size: 1em;
+}
+
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #012d61;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #12a1c5;  
+
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+/* Стиль кнопки */
+.slide-button {
+    position: absolute;
+    bottom: 20px; /* Отступ от нижнего края */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #61a832; /* Цвет кнопки с прозрачностью */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.slide-button:hover {
+    background-color:#213812; /* Цвет кнопки при наведении */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide.active {
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    background: #555; /* Прозрачный фон для улучшения читаемости текста */
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 80%; /* Чтобы текст не выходил за края слайда */
+}
+
+/* Секции */
+section {
+    padding: 40px 0;
+}
+
+section.about-us, section.news {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.about-us p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Стили для раздела "Доступный главный врач" */
+.available-doctor {
+    background-color: #e0f7fa; /* Светло-голубой фон */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; /* Отступ сверху */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень для эффекта */
+}
+
+.available-doctor h2 {
+    text-align: center;
+    color: #012d61;
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.doctor-info {
+    display: flex; /* Горизонтальное расположение фото и текста */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+}
+
+.doctor-photo {
+    border-radius: 50%; /* Круглая форма фото */
+    width: 200px; /* Ширина фото */
+    height: 200px; /* Высота фото */
+    margin-right: 20px; /* Отступ справа от фото */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень для фото */
+}
+
+.doctor-text {
+    max-width: 600px; /* Максимальная ширина текста */
+    color: #333;
+}
+
+.doctor-text p {
+    margin-bottom: 10px; /* Отступ между абзацами */
+    line-height: 1.5; /* Высота строки */
+    color: #555;
+}
+
+
+
+/* Мультиязычность */
+.language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-toggle a {
+    color: white;
+    background: #0e839c;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.language-toggle a:hover {
+    background: #12a1c5;
+}
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background: #e3f2fd;
+    color: #333;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background: #61a832;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.hero .btn :hover {
+    background-color: #213812;  
+}
+.services-overview {
+    padding: 30px 0;
+    color: #333;
+    display: flex; /* Используем Flexbox для центрирования */
+    flex-direction: column; /* Направление элементов — по колонкам */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    justify-content: center; /* Центрируем элементы по вертикали */
+}
+
+.services-overview h3 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #012d61;
+}
+
+.services-overview ul {
+    list-style-type: none;
+    padding: 0; /* Убираем стандартные отступы у списка */
+    margin: 0; /* Убираем стандартные отступы у списка */
+    display: flex; /* Используем Flexbox для горизонтального размещения элементов */
+    justify-content: center; /* Центрируем элементы в списке */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при малой ширине */
+}
+
+.services-overview ul li {
+    margin: 0 15px; /* Увеличен отступ между элементами для лучшего восприятия */
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Общий стиль */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Общие стили для кнопок в меню */
+nav ul li .button {
+    background-color: #61a832;  
+    color: #fff;  /* Белый текст */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Стили при наведении */
+nav ul li .button:hover {
+    background-color: #213812;  
+}
+
+/* Для выделения кнопок от остального меню */
+nav ul li .button {
+    margin-left: 15px;
+}
+
+/* Стили для контейнера с карточками */
+.info-cards {
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение карточек */
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Фон секции */
+    border-radius: 10px;
+}
+
+/* Стили для отдельных карточек */
+.info-cards .card {
+    text-align: center; /* Центрируем текст */
+    padding: 20px;
+    background-color: #fff; /* Фон карточки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    border-radius: 30px;
+    width: 150px; /* Ширина каждой карточки */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+/* Стили для заголовков (цифры) в карточках */
+.info-cards .card h3 {
+    font-size: 36px;
+    color: #12a1c5; /* Синий цвет цифр */
+    margin: 0;
+}
+
+/* Стили для описания под цифрами */
+.info-cards .card p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 0;
+}
+
+/* Эффект увеличения карточки при наведении */
+.info-cards .card:hover {
+    transform: scale(1.05); /* Небольшое увеличение */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Увеличенная тень */
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.4em;
+        text-align: center;
+        margin: 0;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .section-title {
+        font-size: 1.4em;
+    }
+
+    .language-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Адаптивность для карточек */
+    .info-cards {
+        flex-direction: column; /* Строки карточек становятся колонками */
+        align-items: center; /* Центрируем карточки */
+    }
+    
+    .card {
+        flex: 1 1 100%; /* Каждая карточка занимает 100% ширины */
+        margin: 10px 0; /* Отступ между карточками по вертикали */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .slider {
+        height: 200px;
+    }
+
+    .about-us, .news {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Адаптивность для карточек на очень маленьких экранах */
+    .info-cards {
+        padding: 0 10px; /* Добавляем небольшой отступ */
+    }
+    
+    .card {
+        flex: 1 1 100%; /* Каждая карточка занимает 100% ширины */
+        margin: 10px 0; /* Отступ между карточками по вертикали */
+        padding: 15px; /* Увеличиваем отступ внутри карточек для лучшего восприятия */
+    }
+}
+
+/* Стили для кнопок */
+.button-container {
+    display: flex; /* Используем Flexbox для выравнивания */
+    justify-content: center; /* Центрирование кнопок по горизонтали */
+    margin-top: 20px; /* Отступ сверху, если нужно */
+}
+
+.button-container button {
+    margin: 0 10px; /* Отступы между кнопками */
+}
+
+.sidebar {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0; /* Отступ сверху и снизу */
+    max-width: 300px; /* Максимальная ширина бокового блока */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #0077b5;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+}
+
+.button {
+    background-color: #61a832;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0; /* Отступы между кнопками */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #005f8d;
+}
+
+.sidebar h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 5px 0; /* Отступы между элементами списка */
+}
+
+.sidebar ul li a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+.sidebar ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 5px 0; /* Отступы между элементами списка */
+}
+
+.sidebar ul li a {
+    color: #0077b5;
+    text-decoration: none;
+    display: flex; /* Для выравнивания текста и иконок */
+    align-items: center; /* Центрирование иконки и текста по вертикали */
+}
+
+.sidebar ul li a i {
+    margin-right: 8px; /* Отступ между иконкой и текстом */
+}
+
+/* Основной стиль раздела новостей */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .news-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .news-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .news-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .news-card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .news-card-title:hover {
+    text-decoration: underline;
+  }
+  
+  .news-card-date {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+  .all-news-link {
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
+  .all-news-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Адаптивность для мобильных устройств */
+  @media (max-width: 600px) {
+    .news-card {
+      flex-direction: column;
+    }
+    
+    .news-card-image {
+      height: 150px;
+    }
+  }
+  

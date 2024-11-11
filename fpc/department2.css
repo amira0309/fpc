@@ -1,0 +1,17 @@
+#therapy-department {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+#therapy-department h2, #therapy-department h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0077b5;
+}
+
+#therapy-department p, #therapy-department ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}

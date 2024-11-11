@@ -1,0 +1,87 @@
+.department-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.department-info h2, .department-info h3 {
+    color: #0077b5;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.department-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.department-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.department-info ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.department-info ul li::marker {
+    color: #0077b5;
+}
+
+.department-info ul, .department-info p {
+    margin-bottom: 20px;
+}
+
+.staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1300px; /* Ограничиваем контейнер по ширине */
+    margin: 0 auto; /* Центрируем */
+}
+
+.staff-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 180px; /* Уменьшили ширину карточки */
+    flex: 1 1 180px; /* Flex-grow и flex-basis для более гибкой компоновки */
+}
+
+.staff-member img {
+    width: 100px; /* Уменьшаем изображение */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.staff-member h4 {
+    font-size: 16px; /* Уменьшили размер заголовка */
+    margin-bottom: 10px;
+    color: #0077b5;
+}
+
+.staff-member p {
+    font-size: 13px; /* Уменьшили размер текста */
+    color: #555;
+}
+
+.staff-member strong {
+    font-weight: bold;
+}
+
+h3 {
+    color: #0077b5;
+    text-align: center;
+}

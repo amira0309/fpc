@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Восточно-Казахстанский фтизиопульмонологический центр. Лечение и диагностика туберкулеза и легочных заболеваний.">
+    <title>ВКО Фтизиопульмонологический центр</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключаем иконку (favicon) -->
+    <link rel="icon" href="assets/images/LOGO.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
+
+    <style>
+        .photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .photo img {
+            max-width: 100%;  /* Ограничивает ширину до 100% контейнера */
+            height: auto;    /* Автоматически сохраняет пропорции */
+            border-radius: 8px; /* Закругленные углы (по желанию) */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление тени */
+        }
+        /* Основной контейнер для новостей */
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Стили для карточки новости */
+.news-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.news-item:hover {
+  transform: scale(1.02);
+}
+
+.news-image {
+  width: 150px;
+  height: 100px;
+  margin-right: 1rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-decoration: none;
+}
+
+.news-title:hover {
+  text-decoration: underline;
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .news-image {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1rem 0;
+  }
+}
+
+/* Кнопка прокрутки вверх */
+.scroll-to-top {
+  display: none; /* Скрыта по умолчанию */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+<h2>НОВОСТИ</h2>
+    <div class="news-container">
+        <div class="news-item">
+        <img src="assets/images/news/seminar.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="seminar.html" class="news-title">Комплаенс-офицер фтизиопульмонологического центра Ольга Стародубцева провела семинар на тему: «Кодекс медицинской этики профессионального поведения и медицинской субординации работников ВК ОФПЦ, независимо от занимаемой должности».</a>
+            <p class="news-date">28.10.2024</p>
+    </div>
+        </div>
+    </div>
+    
+    <div class="news-container">
+        <div class="news-item">
+        <img src="assets/images/news/prazdnik.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="prazdnik.html" class="news-title">В канун одного из самых торжественных праздников страны - Дня Республики сотрудники нашего центра были отмечены ведомственными наградами.</a>
+            <p class="news-date">24.10.2024</p>
+    </div>
+        </div>
+    </div>
+
+  
+    <div class="news-container">
+        <div class="news-item">
+        <img src="assets/images/news/training.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="training.html" class="news-title">Ресурсы для успеха: эффективная работа в условиях развития Партнерства Стоп ТБ
+            </a>
+            <p class="news-date">18.10.2024</p>
+    </div>
+        </div>
+    </div>
+
+    <div class="news-container">
+        <div class="news-item">
+        <img src="assets/images/news/results.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="results.html" class="news-title">Итоги противотуберкулезных мероприятий за девять месяцев 2024 года обсуждены на заседании Координационного совета Управления здравоохранения Восточно-Казахстанской области.
+            </a>
+            <p class="news-date">08.10.2024</p>
+    </div>
+        </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-item">
+      <img src="assets/images/news/results.jpg" alt="Изображение новости" class="news-image">
+      <div class="news-content">
+          <a href="results.html" class="news-title">Итоги противотуберкулезных мероприятий за девять месяцев 2024 года обсуждены на заседании Координационного совета Управления здравоохранения Восточно-Казахстанской области.
+          </a>
+          <p class="news-date">08.10.2024</p>
+  </div>
+      </div>
+  </div>
+
+    <!-- Кнопка для прокрутки вверх -->
+    <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top">↑</button>
+    
+
+<div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

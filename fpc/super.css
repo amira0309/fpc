@@ -1,0 +1,132 @@
+/* Стили для секции Наблюдательного совета */
+.council {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.council h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.council-member {
+    text-align: center;
+    margin: 20px;
+    max-width: 200px;
+}
+
+.council-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #0077b5; /* Цвет рамки */
+}
+
+.council-member h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.council-member p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Стили для секции Наблюдательного совета */
+.council {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.council h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.council-member {
+    text-align: center;
+    margin: 20px;
+    max-width: 200px;
+}
+
+.council-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #0077b5; /* Цвет рамки */
+}
+
+.council-member h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.council-member p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.documents-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.document-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.document-list li {
+    margin-bottom: 10px;
+}
+
+.document-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.document-list a:hover {
+    color: #007BFF;
+}
+
+.document-list i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.document-list i.fa-file-pdf {
+    color: #E74C3C; /* Красный цвет для PDF иконки */
+}
+
+.document-list i.fa-file-word {
+    color: #2A74DA; /* Синий цвет для Word иконки */
+}
+
+.document-list span {
+    flex-grow: 1;
+}
