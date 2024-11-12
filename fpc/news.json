@@ -171,6 +171,14 @@
         "video": "assets/images/news/poslanie.jpg",
         "type": "image",
         "link": "poslanie.html"
+    },
+
+    {
+        "title": "Акция - Идем в школу вместе!",
+        "date": "02.09.2024",
+        "video": "assets/images/news/school.jpg",
+        "type": "image",
+        "link": "school.html"
     }
 
 
