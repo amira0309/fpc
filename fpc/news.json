@@ -155,5 +155,14 @@
         "video": "assets/images/news/mio.jpg",
         "type": "image",
         "link": "corruption.html"
+    },
+
+    {
+        "title": "Управление рисками в организациях здравоохранения",
+        "date": "09.09.2024",
+        "video": "assets/images/news/risk.jpg",
+        "type": "image",
+        "link": "risk.html"
     }
 ]
+
