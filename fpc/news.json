@@ -147,5 +147,13 @@
         "video": "assets/images/news/corruption.jpg",
         "type": "image",
         "link": "corruption.html"
+    },
+
+    {
+        "title": "Чтобы помощь противотуберкулезная была качественной",
+        "date": "12.09.2024",
+        "video": "assets/images/news/mio.jpg",
+        "type": "image",
+        "link": "corruption.html"
     }
 ]
