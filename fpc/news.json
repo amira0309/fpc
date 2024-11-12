@@ -100,9 +100,14 @@
         "date": "20.09.2024",
         "image": "assets/images/news/learning.jpg",
         "link": "learning.html"
+    },
+
+    {
+        "title": "Цикл фтизиатрии для интернов НАО «МУС» ",
+        "date": "19.09.2024",
+        "image": "assets/images/news/video/intern.mp4",
+        "link": "interny.html"
     }
-
-
 
 
 ]
