@@ -30,6 +30,12 @@
         "date": "08.10.2024",
         "image": "assets/images/news/monitoring.jpg",
         "link": "monitoring.html"
-    }
+    },
     
+    {
+        "title": "Об ускоренном методе выявления туберкулеза GeneХpert рассказывает областной координатор лабораторной службы группы МиО, врач бактериолог Ляззат Бигалиева        ",
+        "date": "04.10.2024",
+        "image": "assets/images/news/video/genexpert.mp4",
+        "link": "genexpert.html"
+    }
 ]
