@@ -163,23 +163,40 @@ function scrollToTop() {
   });
 }
 
-// Функция для загрузки новостей из файла JSON
+// новости
+
+
 function loadNews() {
     fetch('news.json')
         .then(response => response.json())
         .then(data => {
             const newsPlaceholder = document.getElementById('news-placeholder');
-            data.forEach(news => {
-                // Создаём HTML для каждой карточки новости
+            data.slice(0, 4).forEach(news => {
                 const newsCard = document.createElement('div');
                 newsCard.classList.add('news-card');
+                
+                // Определяем контент: изображение или видео
+                let mediaContent;
+                if (news.type === 'video') {
+                    mediaContent = `
+                        <video class="news-card-image" autoplay muted loop playsinline>
+                            <source src="${news.image}" type="video/mp4">
+                            Ваш браузер не поддерживает тег video.
+                        </video>
+                    `;
+                } else if (news.type === 'image') {
+                    mediaContent = `<img src="${news.image}" alt="${news.title}" class="news-card-image">`;
+                }
+
+                // Заполняем HTML-контент карточки новости
                 newsCard.innerHTML = `
-                    <img src="${news.image}" alt="Изображение новости" class="news-card-image">
+                    ${mediaContent}
                     <div class="news-card-content">
                         <a href="${news.link}" class="news-card-title">${news.title}</a>
                         <p class="news-card-date">${news.date}</p>
                     </div>
                 `;
+
                 // Добавляем карточку в контейнер
                 newsPlaceholder.appendChild(newsCard);
             });
@@ -187,5 +204,6 @@ function loadNews() {
         .catch(error => console.error('Ошибка загрузки новостей:', error));
 }
 
-// Вызов функции при загрузке страницы
+// Загружаем новости при загрузке страницы
 window.onload = loadNews;
+
