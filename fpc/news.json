@@ -139,5 +139,13 @@
         "video": "assets/images/news/nesveldinovy.jpg",
         "type": "image",
         "link": "nesveldinovy.html"
+    },
+
+    {
+        "title": "Ознакомились с Политикой противодействия коррупции ",
+        "date": "13.09.2024",
+        "video": "assets/images/news/corruption.jpg",
+        "type": "image",
+        "link": "corruption.html"
     }
 ]
