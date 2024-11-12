@@ -65,5 +65,14 @@
         "date": "30.09.2024",
         "image": "assets/images/news/insurance.jpg",
         "link": "insurance.html"
+    },
+
+    {
+        "title": "В фтизиопульмонологическом центре Восточно-Казахстанской области с 10 октября по 10 ноября 2024 года будет проводиться внутренний анализ коррупционных рисков! ",
+        "date": "30.09.2024",
+        "image": "assets/images/news/vakr.svg",
+        "link": "vakr.html"
     }
+
+
 ]
