@@ -1,0 +1,2 @@
+fpc/assets/images/news/video/intern.mp4 filter=lfs diff=lfs merge=lfs -text
+fpc/assets/images/news/video/razbor.mp4 filter=lfs diff=lfs merge=lfs -text
