@@ -93,6 +93,16 @@
         "date": "23.09.2024",
         "image": "assets/images/news/razbor.jpg",
         "link": "razbor.html"
+    },
+
+    {
+        "title": "Не пропустить патологию ",
+        "date": "20.09.2024",
+        "image": "assets/images/news/learning.jpg",
+        "link": "learning.html"
     }
+
+
+
 
 ]
