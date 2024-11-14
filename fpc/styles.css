@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;;
-    background-color:#e0f7fa;
+    background-color:#fff;
 ;
 
 }
@@ -145,8 +145,8 @@ header {
 /* Основные стили */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
 }
 
 /* Контейнер навигации */
@@ -310,7 +310,7 @@ body {
 
 
 header {
-    background: linear-gradient(90deg, #dfe2e2, #e0f7fa);
+    background:#fff ;
     color: #012d61;
 
 }
@@ -905,3 +905,32 @@ nav ul li .button {
     }
   }
   
+  .header-extras {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Центрируем элементы по вертикали */
+    padding: 10px;
+}
+
+.language-switcher {
+    font-size: 16px;
+    margin: 0; /* Убираем любые дополнительные отступы */
+}
+
+.button-container {
+    margin: 0; /* Убираем любые дополнительные отступы */
+}
+
+.button-container .btn {
+    padding: 2px 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #012d61;
+    border-radius: 4px;
+    display: inline-block; /* Обеспечиваем, чтобы кнопка оставалась в пределах строки */
+    vertical-align: middle; /* Центрируем кнопку по вертикали */
+}
+
+.button-container .btn:hover {
+    background-color: #0056b3;
+}
