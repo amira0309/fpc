@@ -1,12 +1,158 @@
 <!-- Подвал сайта -->
+<style>
+    /* Footer container */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Layout for footer sections */
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left, middle, and right sections */
+footer .container > div {
+    min-width: 250px;
+    margin: 10px;
+}
+
+/* Footer headings */
+footer h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer links */
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Map image */
+footer .map .map2 {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: right;
+}
+
+/* Contact Info */
+footer .contact-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    justify-content: end;
+}
+
+/* Social Icons */
+footer .social-icons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #bbb;
+}
+
+/* Footer copyright */
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 <footer>
-    <div class="container2">
+    <div class="container">
         
+        <!-- Left Section -->
+        <div>
+            <h3>Услуги</h3>
+            <ul>
+                <li><a href="consult.html">Консультативно-диагностические услуги</a></li>
+                <li><a href="price.html">Прейскурант платных услуг</a></li>
+            </ul>
+            
+            <h3>О нас</h3>
+            <ul>
+                <li><a href="mission.html">Миссия</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="structure.html">Структура центра </a>
+                <li><a href="reports.html">Отчеты</a></li>
+                <li><a href="corporate-documents.html">Корпоративные документы</a></li>
+                <li><a href="strategic-plan.html">Стратегический план</a></li>
+                <li><a href="supervisory-board.html">Наблюдательный совет</a></li>
+                <li><a href="vacancies.html">Вакансии</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+
+        <!-- Middle Section -->
+        <div>
+            <ul>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="custom.html">Государственные закупки</a></li>
+                <li><a href="osms.html">ОСМС</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section (Map and Contacts) -->
+        <div class="map">
+            <div style="margin-bottom: 15px;">
+                <a href="https://yandex.kz/maps/-/CDthZ6iw" target="_blank">
+                </a>
+            </div>
+            <div class="map2" style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/10306/ust-kamenogorsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Усть‑Каменогорск</a><a href="https://yandex.kz/maps/10306/ust-kamenogorsk/house/lokomotivnaya_koshesi_3_1/bEsYcwFhSUMPQFtqfXxzdHlqYQ==/?ll=82.566091%2C50.023333&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Локомотивная улица, 3/1 на карте Усть‑Каменогорска — Яндекс Карты</a><iframe src="https://yandex.kz/map-widget/v1/?ll=82.566091%2C50.023333&mode=whatshere&whatshere%5Bpoint%5D=82.561068%2C50.025595&whatshere%5Bzoom%5D=17&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        </div>
+
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
         <p>&copy; 2024 Восточно-Казахстанский фтизиопульмонологический центр. Все права защищены.</p>
-        <p>Телефон: +7 (7232) 78-53-86 | Адрес: ул. Белинского 39, г.Усть-Каменогорск 070000, Казахстан</p>
+        <p>Телефон: +7 (7232) 78-53-86 |Адрес: ВКО, Глубоковский район, с. Опытное поле, ул. Локомотивная, 3/1 </p>
         <p>e-mail: Vko_ptd@med.mail.kz</p>
-   
+    </div>
+    
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100022738894869&mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/fpcvko?igsh=ZWdjYTNvYmplaW9w"><i class="fab fa-instagram"></i></a>
+  
     </div>
 </footer>
