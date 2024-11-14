@@ -71,14 +71,15 @@ function closeForm() {
 // Открытие и закрытие мобильного меню
 function toggleMobileMenu() {
     const navMenuContainer = document.querySelector('.nav-menu-container');
+    const hamburgerIcon = document.querySelector('.hamburger');
+    const closeMenuIcon = document.querySelector('.close-menu');
+    
     const isMenuOpen = navMenuContainer.style.display === 'flex';
-
     navMenuContainer.style.display = isMenuOpen ? 'none' : 'flex';
-    document.querySelector('.hamburger').style.display = isMenuOpen ? 'block' : 'none';
-    document.querySelector('.close-menu').style.display = isMenuOpen ? 'none' : 'block';
+    hamburgerIcon.style.display = isMenuOpen ? 'block' : 'none';
+    closeMenuIcon.style.display = isMenuOpen ? 'none' : 'block';
 
     if (!isMenuOpen) {
-        document.querySelector('.back-button').style.display = 'none';
         closeAllSubmenus(); // Закрываем все подменю при закрытии мобильного меню
     }
 }
@@ -86,7 +87,6 @@ function toggleMobileMenu() {
 // Открытие и закрытие подменю по клику
 function toggleSubmenu(event) {
     event.preventDefault();
-
     const parentLi = event.target.closest('li');
     const isSubmenuOpen = parentLi.classList.contains('show');
 
@@ -100,7 +100,6 @@ function toggleSubmenu(event) {
 // Открытие и закрытие вложенного подменю (dropdown1)
 function toggleNestedSubmenu(event) {
     event.preventDefault();
-
     const parentLi = event.target.closest('li');
     const isSubmenuOpen = parentLi.classList.contains('nested-show');
 
@@ -141,19 +140,7 @@ document.querySelectorAll('.dropdown .has-dropdown > a').forEach(anchor => {
     anchor.addEventListener('click', toggleNestedSubmenu);
 });
 
-// Показать или скрыть кнопку при прокрутке
-window.onscroll = function () {
-  toggleScrollToTopButton();
-};
 
-function toggleScrollToTopButton() {
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-}
 
 // Функция для прокрутки вверх
 function scrollToTop() {

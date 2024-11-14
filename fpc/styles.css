@@ -149,6 +149,7 @@ body {
     padding: 0;
 }
 
+/* Контейнер навигации */
 .nav-menu-container {
     display: flex;
     justify-content: center;
@@ -160,16 +161,16 @@ body {
     font-size: 24px;
     cursor: pointer;
     color: #333;
-    display: none; /* По умолчанию скрыты на десктопе */
+    display: none; /* Показываем гамбургер только на мобильной версии */
 }
 
-/* Навигационное меню */
+/* Основное меню */
 .nav-menu {
     list-style: none;
-    display: flex;
-    gap: 20px;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px;
     flex-direction: row;
 }
 
@@ -190,47 +191,57 @@ body {
     color: #0066cc;
 }
 
-/* Подменю */
-.dropdown, .dropdown1 {
+/* Подменю для ПК: две колонки с подчеркиванием текста */
+.nav-menu li ul {
     display: none;
+    list-style: none;
     position: absolute;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 10px 0;
-    min-width: 200px;
-    z-index: 1000;
-}
-
-/* Позиционирование основного подменю на десктопе */
-.dropdown {
     top: 100%;
     left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    column-count: 2; /* Две колонки */
+    column-gap: 20px;
 }
 
-/* Позиционирование вложенного подменю справа от основного подменю на десктопе */
-.dropdown1 {
-    top: 0;
-    left: 100%;
+.nav-menu li ul li a {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: underline; /* Подчеркивание текста */
+    transition: color 0.3s, background-color 0.3s;
 }
 
-/* Показ подменю по клику */
-.show > .dropdown, .nested-show > .dropdown1 {
-    display: block;
-    opacity: 1;
+.nav-menu li ul li a:hover {
+    color: #0066cc;
+    background-color: #f0f0f0;
+}
+
+/* Показ подменю при наведении на ПК */
+@media (min-width: 769px) {
+    .nav-menu li:hover > ul {
+        display: block;
+    }
 }
 
 /* Мобильные стили */
 @media (max-width: 768px) {
+    /* Гамбургер для мобильной версии */
     .hamburger {
-        display: block; /* Показываем гамбургер только на мобильных */
+        display: block;
     }
     .close-menu {
-        display: block; /* Показываем кнопку закрытия только на мобильных */
+        display: block;
         align-self: flex-end;
         margin-bottom: 10px;
     }
+
+    /* Контейнер меню для мобильной версии */
     .nav-menu-container {
-        display: none;
+        display: none; /* Скрыто по умолчанию */
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
@@ -242,16 +253,59 @@ body {
         padding-top: 60px;
         z-index: 1000;
     }
+
+    /* Основное меню в виде колонок */
     .nav-menu {
         flex-direction: column;
         width: 100%;
+        padding: 0;
+        margin: 0;
     }
-    
-    /* Подменю и вложенное подменю располагаются снизу основного меню на мобильных */
-    .dropdown, .dropdown1 {
+
+    /* Подменю для мобильной версии */
+    .nav-menu li ul {
+        display: none;
         position: static;
+        background-color: transparent;
+        box-shadow: none;
         padding-left: 20px;
     }
+
+    /* Показ подменю на мобильной версии при добавлении класса show */
+    .show > ul {
+        display: block;
+    }
+
+    /* Стиль ссылок подменю на мобильной версии */
+    .nav-menu li ul li a {
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #333;
+        text-decoration: none; /* Без подчеркивания на мобильной версии */
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Показываем гамбургер только на мобильных */
+    }
+    .close-menu {
+        display: none; /* По умолчанию скрыта кнопка закрытия */
+    }
+    .nav-menu-container {
+        display: none; /* Скрыто по умолчанию */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.dropdown, .dropdown1 {
+    display: none; /* Скрыто по умолчанию */
+}
+
+.show > .dropdown,
+.nested-show > .dropdown1 {
+    display: block; /* Показать при добавлении класса */
 }
 
 
