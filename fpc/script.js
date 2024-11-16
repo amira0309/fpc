@@ -29,6 +29,14 @@ fetch('header.html')
         document.getElementById('header-placeholder').innerHTML = data;
     });
 
+    // Загружаем содержимое хедера из файла header_kk.html
+fetch('header_kk.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('header_kk-placeholder').innerHTML = data;
+});
+
+
     // Загружаем содержимое gov из файла gov.html
 fetch('gov.html')
 .then(response => response.text())
@@ -229,5 +237,21 @@ accordions.forEach(accordion => {
         } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const rusLink = document.getElementById("rus-link");
+    const kazLink = document.getElementById("kaz-link");
+
+    // Add event listeners for the links
+    rusLink.addEventListener("click", function() {
+        rusLink.classList.add("current-language");
+        kazLink.classList.remove("current-language");
+    });
+
+    kazLink.addEventListener("click", function() {
+        kazLink.classList.add("current-language");
+        rusLink.classList.remove("current-language");
     });
 });

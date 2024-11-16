@@ -7,56 +7,50 @@
  <script src="/js/google-translate.js"></script>
  <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
  <style>
+/* Set original colors for icons */
+.social-icon .fa-instagram {
+    color: #E4405F !important; /* Instagram brand color */
+}
+
+.social-icon .fa-facebook {
+    color: #1877F2 !important; /* Facebook brand color */
+}
+
+/* Hover effect */
+.social-icon:hover i {
+    color: #FFD700 !important; /* Yellow color on hover */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
 
 </style>
 <header>
     <div class="top-header">
         <div class="container">
-            
             <div class="logo-info">
-            <div class="logo">
-                <img src="assets/images/LOGO.jpg" alt="Логотип" width="100">
-            </div>
-            <div class="center-info">
-                <h1>Шығыс  Қазақстан облыстық <br>фтизиопульмонология орталығы </h1>
-            </div>
-            </div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>Адрес:</span>
-                    <a href="adress">г.Усть-Каменогорск, ул. Белинского 39 </a>
+                <div class="logo">
+                    <img src="assets/images/LOGO.jpg" alt="Логотип" width="100">
                 </div>
-                <div class="contact-item">
-                    <span>Приемная главного врача:</span>
-                    <a href="tel:87232785386">8 (7232) 78-53-86</a>
+                <div class="center-info">
+                    <h1>ШЖҚ КМК Шығыс Қазақстан облыстық фтизилпульмонологиялық орталығы</h1>
                 </div>
+                </div>
+            
+            <!-- Текст по центру -->
+            <div class="center-text">
+                <p class="tagline">Сенімге лайық тәжірибе</p>
             </div>
-            <!-- Социальные сети -->
-        <div class="social-links">
-                <a href="index.html" target="_blank" class="social-icon home-icon">
-                    <i class="fas fa-home"></i> <!-- Иконка домика -->
+            
+            <!-- Социальные ссылки справа -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/fpcvko?igsh=ZWdjYTNvYmplaW9w" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram" style="color: #E4405F;"></i>
                 </a>
+                <a href="https://www.facebook.com/profile.php?id=100022738894869&mibextid=LQQJ4d" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook" style="color: #1877F2;"></i>
+                </a>
+            </div>
         </div>
-        <div class="social-links">
-            <a href="https://www.instagram.com/fpcvko?igsh=ZWdjYTNvYmplaW9w" target="_blank" class="social-icon">
-                <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="https://www.facebook.com/profile.php?id=100022738894869&mibextid=LQQJ4d" target="_blank" class="social-icon">
-                <i class="fab fa-facebook"></i>
-            </a>
-        </div>
-                <div class="language-switcher">
-                    <span class="current-language">Рус</span> | 
-                    <a href="index_kk.html">Қаз</a>
-                </div>
-                <div class="button-container"><a href="contacts.html" class="btn">Байланысу</a></div>
-        
-        </div>
-
-        </div>
-
-
     </div>
 
         <div class="bottom-header">
@@ -74,12 +68,13 @@
                         <li><a href="mission.html">Миссия</a></li>
                         <li><a href="history.html">История</a></li>
                         <li class="has-dropdown">
-                            <a href="structure.html" onclick="toggleSubmenu(event)">Структура центра </a>
+                            <a href="#" onclick="toggleNestedSubmenu(event)">Структура центра</a>
                             <ul class="dropdown1">
                                 <li><a href="administration.html">Руководство</a></li>
                                 <li><a href="structure.html">Организационная структура</a></li>
                             </ul>
                         </li>
+                                                
                         <li><a href="reports.html">Отчеты</a></li>
                         <li><a href="corporate-documents.html">Корпоративные документы</a></li>
                         <li><a href="strategic-plan.html">Стратегический план</a></li>
@@ -125,11 +120,39 @@
                     </ul>
                     </li>
                     <li><a href="news.html">Жаңалықтар</a></li>
-                    <li><a href="custom.html">Государственные закупки</a></li>
+                <li class="has-dropdown">
+                    <a href="corruption.html"onclick="toggleSubmenu(event)">Сыбайлас жемқорлыққа қарсы іс-қимыл</a>
+                    <ul class="dropdown">
+                    <li><a href="general.html">Общая информация</a></li>
+                    <li><a href="standart.html"> Антикоррупционный стандарт ВК ОФПЦ </a></li>
+                    <li><a href="politic.html">Антикоррупционная политика </a></li>
+                    <li><a href="plan.html">План мероприятий  </a></li>
+                    <li><a href="prikaz.html">Приказ об утверждении состава рабочей группы по проведению внутреннего анализа коррупционных рисков </a></li>
+                    <li><a href="news_cor.html">Новости </a></li>
+                    <li><a href="spravki.html">Справки по итогам внутреннего анализа коррупционных рисков </a></li>
+                    <li><a href="instruction.html">Политика и инструкции по противодействию коррупции  </a></li>
+                    <li><a href="prikaz2023.html">Приказ об утверждении состава рабочей группы по проведению внутреннего анализа коррупционных рисков и справка по итогам внутреннего анализа коррупционных рисков в деятельности ВК ОФПЦ УЗ ВКО от 19.05.2023 года </a></li>
+                    <li><a href="complaens.html">Положение о комплаенс-службе </a></li>
+                    <li><a href="documents2023.html">Инструкция по противодействию коррупции, кодекс этики, конфликт интересов, политика противодействия коррупции от 22.06.2023 года   </a></li>
+                    <li><a href="plan2024.html">План мероприятий, порядок информирования работниками о фактах или возможных нарушениях антикоррупционного законодательства, антикоррупционный стандарт на 2024 год. </a></li>
+                </ul>
+                </li>
+                <li><a href="custom.html">Государственные закупки</a></li>
                 <li><a href="osms.html">МӘМС</a></li>
+
             </ul>
         </nav>
-    </div>
-
+        
+        <div class="header-extras">
+            <div class="language-switcher">
+                <a href="index.html" class="current-language" id="rus-link">Рус</a> | 
+                <a href="index_kk.html" id="kaz-link">Қаз</a>
+            </div>
+        </div>
+        
+            <div class="button-container">
+                <a href="contacts.html" class="btn">КОНТАКТЫ</a>
+            </div>
+        </div>
 <script src="script.js"></script>
 </header>

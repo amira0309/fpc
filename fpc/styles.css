@@ -114,12 +114,28 @@ header {
     margin: 0;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between elements */
+}
+
+.button-container {
+    margin-right: auto; /* Pushes social icons to the right of the button */
+}
+
+.social-icon {
+    font-size: 1.5em; /* Adjust icon size as needed */
+    text-decoration: none;
+}
+
 
 
 
 /* Контакты */
 .contact-info {
     text-align: right;
+    font-size: 0.7em;
 }
 
 /* Для мобильных устройств */
@@ -556,7 +572,7 @@ section.about-us, section.news {
 
 /* Стили для раздела "Доступный главный врач" */
 .available-doctor {
-    background-color: #e0f7fa; /* Светло-голубой фон */
+    background-color: #e3f2fd; /* Светло-голубой фон */
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px; /* Отступ сверху */
@@ -594,6 +610,24 @@ section.about-us, section.news {
     color: #555;
 }
 
+@media (max-width: 768px) {
+    .doctor-info {
+        flex-direction: column; /* Stack photo and text vertically */
+        align-items: center; /* Center-align on small screens */
+    }
+
+    .doctor-photo {
+        width: 150px; /* Reduce photo size for mobile */
+        height: 150px;
+        margin-right: 0; /* Remove margin for centered alignment */
+        margin-bottom: 15px; /* Add space below the photo */
+    }
+
+    .doctor-text {
+        padding: 0 10px; /* Add padding to prevent overflow */
+        text-align: center; /* Center text for better readability */
+    }
+}
 
 
 /* Мультиязычность */
@@ -643,35 +677,70 @@ section.about-us, section.news {
 .hero .btn :hover {
     background-color: #213812;  
 }
+
 .services-overview {
-    padding: 30px 0;
-    color: #333;
-    display: flex; /* Используем Flexbox для центрирования */
-    flex-direction: column; /* Направление элементов — по колонкам */
-    align-items: center; /* Центрируем элементы по горизонтали */
-    justify-content: center; /* Центрируем элементы по вертикали */
+    background-color: #e3f2fd; /* Light blue background */
+    padding: 30px; /* Spacing for comfort */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    color: #333; /* Main text color */
+    font-family: Arial, sans-serif; /* Consistent font */
+    line-height: 1.6; /* Improved readability */
+}
+
+.services-overview h2, .services-overview h3 {
+    text-align: center;
+    color: #012d61; /* Deep blue color for headings */
+    margin-bottom: 15px; /* Space below headings */
+    font-weight: bold; /* Emphasis on headings */
+}
+
+.services-overview h2 {
+    font-size: 2em; /* Slightly larger font for main heading */
 }
 
 .services-overview h3 {
-    text-align: center;
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #012d61;
+    font-size: 1.6em; /* Slightly smaller font for subheadings */
+}
+
+.services-overview p {
+    font-size: 1.1em; /* Consistent paragraph size */
+    color: #555; /* Slightly lighter color for contrast */
+    margin: 10px 0; /* Space between paragraphs */
+    text-align: center; /* Center-aligned text */
 }
 
 .services-overview ul {
-    list-style-type: none;
-    padding: 0; /* Убираем стандартные отступы у списка */
-    margin: 0; /* Убираем стандартные отступы у списка */
-    display: flex; /* Используем Flexbox для горизонтального размещения элементов */
-    justify-content: center; /* Центрируем элементы в списке */
-    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при малой ширине */
+    list-style-type: none; /* No bullet points */
+    padding: 0;
+    margin: 20px 0; /* Space around list */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    gap: 10px; /* Space between list items */
 }
 
 .services-overview ul li {
-    margin: 0 15px; /* Увеличен отступ между элементами для лучшего восприятия */
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #333;
+    text-align: center;
+    line-height: 1.6; /* Line height for readability */
+}
+
+.services-overview ul li::before {
+    content: "•"; /* Custom bullet symbol */
+    color: #012d61; /* Matches heading color */
+    margin-right: 8px; /* Space after bullet */
+}
+
+.contact-info {
+    font-size: 1.1em; /* Base font size for the contact info section */
+    color: #333;
+}
+
+.contact-info .phone-number {
+    font-size: 1.4em; /* Larger font size for the phone number */
+    color: #012d61; /* Color matching other headings for emphasis */
+    font-weight: bold;
 }
 
 /* Общий стиль */
