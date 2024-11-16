@@ -14,44 +14,112 @@
     <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
     <style>
 
-h2 {
-            background-color: #004c8c;
-            color: white;
-            text-align: center;
-            padding: 0 20px ;
-        }
-        h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-        p, ul {
-            padding: 0 20px;
-        }
-        ul {
-            list-style-type: none;
-            margin: 10px 0;
-        }
-        ul li {
-            margin: 5px 0;
-        }
-        .content1 {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-        }
-        h3 {
-            color: #004c8c;
-            font-size: 20px;
-        }
-        .list-barriers {
-    list-style-type: disc; /* Тип маркера: круг */
-    margin-left: 20px; /* Отступ слева для маркеров */
+.content1 {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content1 h2 {
+    background-color: #004c8c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 24px;
+}
+
+.content1 h3 {
+    color: #004c8c;
+    font-size: 20px;
+    margin: 20px 0 10px;
+}
+
+.content1 p {
+    color: #555;
+    font-size: 1.1em;
+    padding: 0 20px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.list-barriers {
+    list-style-type: disc;
+    margin-left: 40px;
+    color: #555;
+    font-size: 1.1em;
 }
 
 .list-barriers li {
-    margin-bottom: 5px; /* Расстояние между элементами списка */
+    margin: 5px 0;
 }
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    color: #004c8c;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Specific Colors for Social Media */
+.social-icon i.fab.fa-instagram {
+    color: #E4405F;
+}
+
+.social-icon i.fab.fa-facebook {
+    color: #1877F2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content1 {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .content1 h2 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .content1 h3 {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .content1 p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .list-barriers {
+        margin-left: 20px;
+        padding: 0 10px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
+}
+
 
 footer .container .contact-info {
     color: #fff;

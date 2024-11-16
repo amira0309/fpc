@@ -1,132 +1,162 @@
-/* Стили для секции Наблюдательного совета */
 .council {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    max-width: 1100px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .council h2 {
-    width: 100%;
+    background-color: #004c8c;
+    color: white;
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
-}
-
-.council-member {
-    text-align: center;
-    margin: 20px;
-    max-width: 200px;
-}
-
-.council-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 3px solid #0077b5; /* Цвет рамки */
-}
-
-.council-member h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.council-member p {
-    font-size: 0.9em;
-    color: #333;
-}
-
-/* Стили для секции Наблюдательного совета */
-.council {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 20px;
-}
-
-.council h2 {
-    width: 100%;
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #333;
+    margin: 0;
+    font-size: 24px;
 }
 
 .council-member {
-    text-align: center;
-    margin: 20px;
-    max-width: 200px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.council-member:last-child {
+    border-bottom: none;
 }
 
 .council-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 3px solid #0077b5; /* Цвет рамки */
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .council-member h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
+    color: #004c8c;
+    font-size: 20px;
+    margin: 0 0 5px;
 }
 
 .council-member p {
-    font-size: 0.9em;
     color: #333;
+    font-size: 1.1em;
+    margin: 0;
+    line-height: 1.5;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
+.council-member div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .documents-section h2 {
+    background-color: #004c8c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
     font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
 }
 
 .document-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0 20px;
 }
 
 .document-list li {
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-.document-list a {
+.document-list li a {
+    color: #004c8c;
+    text-decoration: none;
+    font-size: 1.1em;
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    transition: color 0.3s ease;
 }
 
-.document-list a:hover {
-    color: #007BFF;
-}
-
-.document-list i {
-    font-size: 24px;
+.document-list li a i {
     margin-right: 10px;
+    font-size: 1.2em;
 }
 
-.document-list i.fa-file-pdf {
-    color: #E74C3C; /* Красный цвет для PDF иконки */
+/* Specific colors for document icons */
+.document-list li a i.fa-file-word {
+    color: #2a5699; /* Blue for Word documents */
 }
 
-.document-list i.fa-file-word {
-    color: #2A74DA; /* Синий цвет для Word иконки */
+.document-list li a i.fa-file-pdf {
+    color: #d9534f; /* Red for PDF documents */
 }
 
-.document-list span {
-    flex-grow: 1;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .documents-section {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .documents-section h2 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .document-list {
+        padding: 0 10px;
+    }
+
+    .document-list li a {
+        font-size: 1em;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .council, .documents-section {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .council h2, .documents-section h2 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .council-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .council-member img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .council-member h3 {
+        font-size: 18px;
+    }
+
+    .council-member p {
+        font-size: 1em;
+    }
+
+    .document-list {
+        padding: 0 10px;
+    }
+
+    .document-list li a {
+        font-size: 1em;
+    }
+}
+
+footer .container .contact-info {
+    color: #fff;
 }
