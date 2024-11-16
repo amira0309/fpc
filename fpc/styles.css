@@ -31,7 +31,7 @@ header {
     display: flex;
     justify-content: space-between; 
     max-width: 1200px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 .logo img {
     max-width: 30px;
@@ -77,6 +77,45 @@ header {
     margin-bottom: 10px; 
 }
 
+/* Основные стили для контейнера */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Левый блок (заголовок) */
+.logo-info {
+    flex: 1;
+    text-align: left;
+}
+
+/* Центральный блок (текст) */
+.center-text {
+    flex: 1;
+    text-align: center;
+}
+
+/* Правый блок (социальные ссылки) */
+.social-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Стиль для текста "Опыт достойный доверия" */
+.tagline {
+    font-style: italic;
+    font-size: 18px;
+    color: #555;
+    font-family: "Georgia", serif;
+    margin: 0;
+}
+
+
+
 
 /* Контакты */
 .contact-info {
@@ -114,11 +153,10 @@ header {
 .center-info h1 {
     font-size: 0.7em;
     color: #012d61;
-    margin: 0;
+    margin-right: 10px;
 }
 
 .center-info p {
-    margin: 0;
     color:  #576074;
     font-weight: bold;
 }
@@ -308,6 +346,63 @@ body {
     display: block; /* Показать при добавлении класса */
 }
 
+/* For mobile menu display */
+.has-dropdown ul.dropdown1 {
+    display: none;
+}
+
+.has-dropdown.nested-show ul.dropdown1 {
+    display: block;
+}
+
+/* Основные стили для скрытого подменю */
+.has-dropdown ul.dropdown1 {
+    display: none;
+    flex-direction: column; /* Вертикальное расположение */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0; /* Скрыто изначально */
+    transition: max-height 0.3s ease; /* Плавное раскрытие */
+}
+
+/* Показ подменю при активном классе nested-show */
+.has-dropdown.nested-show ul.dropdown1 {
+    display: flex;
+    max-height: 500px; /* Подгоните под размер контента */
+}
+
+/* Стили для каждого элемента подменю */
+.has-dropdown ul.dropdown1 li {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.has-dropdown ul.dropdown1 li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+    .has-dropdown ul.dropdown1 {
+        display: none; /* Скрыто по умолчанию на мобильных */
+    }
+
+    .has-dropdown.nested-show ul.dropdown1 {
+        display: flex;
+        flex-direction: column;
+        max-height: 500px; /* Показ при активном классе */
+    }
+
+    /* Настройки для удобства на мобильных устройствах */
+    .has-dropdown ul.dropdown1 li {
+        padding: 15px;
+    }
+}
+
 
 header {
     background:#fff ;
@@ -335,7 +430,6 @@ header h1 {
 
 .social-icon {
     margin: 0 10px; /* Отступы между иконками */
-    color: #012d61; /* Цвет иконок */
     text-decoration: none; /* Убираем подчеркивание */
     font-size: 24px; /* Размер иконок */
 }

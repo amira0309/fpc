@@ -110,6 +110,30 @@ function toggleNestedSubmenu(event) {
     }
 }
 
+function toggleNestedSubmenu(event) {
+    event.preventDefault();
+    const parentLi = event.target.closest('li');
+    const isSubmenuOpen = parentLi.classList.contains('nested-show');
+
+    closeAllNestedSubmenus(); // Закрываем все остальные подменю
+
+    if (!isSubmenuOpen) {
+        parentLi.classList.add('nested-show'); // Открываем текущее подменю
+    }
+}
+
+function closeAllNestedSubmenus() {
+    const allNestedSubmenus = document.querySelectorAll('.has-dropdown.nested-show');
+    allNestedSubmenus.forEach(submenu => submenu.classList.remove('nested-show'));
+}
+
+// Закрытие всех вложенных подменю
+function closeAllNestedSubmenus() {
+    const allNestedSubmenus = document.querySelectorAll('.has-dropdown.nested-show');
+    allNestedSubmenus.forEach(submenu => submenu.classList.remove('nested-show'));
+}
+
+
 // Закрытие всех подменю
 function closeAllSubmenus() {
     document.querySelectorAll('.nav-menu li').forEach(menu => menu.classList.remove('show'));

@@ -7,33 +7,49 @@
  <script src="/js/google-translate.js"></script>
  <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
  <style>
+/* Set original colors for icons */
+.social-icon .fa-instagram {
+    color: #E4405F !important; /* Instagram brand color */
+}
+
+.social-icon .fa-facebook {
+    color: #1877F2 !important; /* Facebook brand color */
+}
+
+/* Hover effect */
+.social-icon:hover i {
+    color: #FFD700 !important; /* Yellow color on hover */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
 
 </style>
 <header>
     <div class="top-header">
         <div class="container">
-            
             <div class="logo-info">
-            <div class="logo">
-                <img src="assets/images/LOGO.jpg" alt="Логотип" width="100">
-            </div>
-            <div class="center-info">
-                <h1>КГП на ПХВ "Восточно-Казахстанский <br>фтизиопульмонологический центр"</h1>
-            </div>
-            </div>
-           
-            
-                <div class="social-links">
-                    <a href="https://www.instagram.com/fpcvko?igsh=ZWdjYTNvYmplaW9w" target="_blank" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-        
-                    <a href="https://www.facebook.com/profile.php?id=100022738894869&mibextid=LQQJ4d" target="_blank" class="social-icon">
-                        <i class="fab fa-facebook"></i>
-                    </a>
+                <div class="logo">
+                    <img src="assets/images/LOGO.jpg" alt="Логотип" width="100">
                 </div>
+                <div class="center-info">
+                    <h1>КГП на ПХВ "Восточно-Казахстанский <br>фтизиопульмонологический центр"</h1>
+                </div>
+                </div>
+            
+            <!-- Текст по центру -->
+            <div class="center-text">
+                <p class="tagline">Опыт достойный доверия</p>
             </div>
-        </div>
+            
+            <!-- Социальные ссылки справа -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/fpcvko?igsh=ZWdjYTNvYmplaW9w" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram" style="color: #E4405F;"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100022738894869&mibextid=LQQJ4d" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook" style="color: #1877F2;"></i>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -52,12 +68,13 @@
                         <li><a href="mission.html">Миссия</a></li>
                         <li><a href="history.html">История</a></li>
                         <li class="has-dropdown">
-                            <a href="structure.html" onclick="toggleSubmenu(event)">Структура центра </a>
+                            <a href="#" onclick="toggleNestedSubmenu(event)">Структура центра</a>
                             <ul class="dropdown1">
                                 <li><a href="administration.html">Руководство</a></li>
                                 <li><a href="structure.html">Организационная структура</a></li>
                             </ul>
                         </li>
+                                                
                         <li><a href="reports.html">Отчеты</a></li>
                         <li><a href="corporate-documents.html">Корпоративные документы</a></li>
                         <li><a href="strategic-plan.html">Стратегический план</a></li>
@@ -109,7 +126,7 @@
                     <li><a href="general.html">Общая информация</a></li>
                     <li><a href="standart.html"> Антикоррупционный стандарт ВК ОФПЦ </a></li>
                     <li><a href="politic.html">Антикоррупционная политика </a></li>
-                    <li><a href="plan.html">План мероприятий - старый </a></li>
+                    <li><a href="plan.html">План мероприятий  </a></li>
                     <li><a href="prikaz.html">Приказ об утверждении состава рабочей группы по проведению внутреннего анализа коррупционных рисков </a></li>
                     <li><a href="news_cor.html">Новости </a></li>
                     <li><a href="spravki.html">Справки по итогам внутреннего анализа коррупционных рисков </a></li>

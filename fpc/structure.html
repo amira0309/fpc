@@ -8,12 +8,28 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Подключение иконок из Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .photo img {
+        max-width: 100%;  /* Ограничивает ширину до 100% контейнера */
+        height: auto;    /* Автоматически сохраняет пропорции */
+        border-radius: 8px; /* Закругленные углы (по желанию) */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление тени */
+    }
+    </style>
+
 </head>
+
 <body>
     <div id="header-placeholder"></div>
 
     <main>
-        <div class="zentr-info">
+        <div class="photo">
             <img src="assets/images/structura.jpg" alt="Структура" class="structura"></div>
 
         </main>
