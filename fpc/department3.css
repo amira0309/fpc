@@ -1,87 +1,169 @@
+/* Department Info Section Container */
 .department-info {
+    background-color: #f2f7fb;
+    padding: 40px 20px;
+}
+
+.container4 {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Main Heading */
+.container4 h2 {
+    background-color: #004c8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin: 0 0 30px 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Subheadings */
+.container4 h3 {
+    color: #004c8c;
+    font-size: 22px;
+    margin: 25px 0 15px;
+    padding: 0 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Text and List Styling */
+.container4 p {
+    color: #555555;
+    font-size: 1.15em;
+    line-height: 1.7;
+    padding: 0 20px;
+    margin: 12px 0;
+}
+
+.container4 ul {
+    list-style-type: disc;
+    margin: 15px 50px;
+    color: #555555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.container4 ul li {
+    margin: 8px 0;
+}
+
+/* Image Styling */
+.surgery-photo img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.department-info h2, .department-info h3 {
-    color: #0077b5;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.department-info p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.department-info ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.department-info ul li {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.department-info ul li::marker {
-    color: #0077b5;
-}
-
-.department-info ul, .department-info p {
-    margin-bottom: 20px;
-}
-
+/* Staff Section - Three Columns */
 .staff {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
-    max-width: 1300px; /* Ограничиваем контейнер по ширине */
-    margin: 0 auto; /* Центрируем */
+    margin-top: 30px;
+    justify-content: space-between;
 }
 
 .staff-member {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: calc(33.333% - 20px); /* Three columns */
     text-align: center;
-    padding: 20px;
-    width: 180px; /* Уменьшили ширину карточки */
-    flex: 1 1 180px; /* Flex-grow и flex-basis для более гибкой компоновки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .staff-member img {
-    width: 100px; /* Уменьшаем изображение */
-    height: 100px;
-    object-fit: cover;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .staff-member h4 {
-    font-size: 16px; /* Уменьшили размер заголовка */
-    margin-bottom: 10px;
-    color: #0077b5;
+    color: #004c8c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
 
 .staff-member p {
-    font-size: 13px; /* Уменьшили размер текста */
-    color: #555;
+    color: #555555;
+    font-size: 1em;
+    margin: 8px 0;
+    line-height: 1.6;
 }
 
-.staff-member strong {
-    font-weight: bold;
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .staff-member {
+        width: calc(50% - 15px); /* Two columns on medium screens */
+    }
+
+    .container4 h2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .container4 h3 {
+        font-size: 20px;
+    }
+
+    .surgery-photo img {
+        max-width: 100%;
+    }
 }
 
-h3 {
-    color: #0077b5;
-    text-align: center;
+@media (max-width: 768px) {
+    .container4 {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .container4 h2 {
+        font-size: 22px;
+        padding: 18px;
+    }
+
+    .container4 h3 {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .container4 p,
+    .container4 ul li {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .staff {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff-member {
+        width: 100%; /* One column on small screens */
+    }
 }
