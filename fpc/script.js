@@ -173,15 +173,22 @@ document.querySelectorAll('.dropdown .has-dropdown > a').forEach(anchor => {
 });
 
 
-
 // Функция для прокрутки вверх
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+  
+  // Функция для прокрутки вниз
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  }
+  
 // новости
 
 
