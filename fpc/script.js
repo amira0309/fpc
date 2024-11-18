@@ -44,12 +44,25 @@ fetch('gov.html')
     document.getElementById('gov-placeholder').innerHTML = data;
 });
 
+   // Загружаем содержимое gov из файла gov_kk.html
+   fetch('gov_kk.html')
+   .then(response => response.text())
+   .then(data => {
+       document.getElementById('gov_kk-placeholder').innerHTML = data;
+   });
     // Загружаем содержимое хедера из файла footer.html
 fetch('footer.html')
 .then(response => response.text())
 .then(data => {
     document.getElementById('footer-placeholder').innerHTML = data;
 });
+
+   // Загружаем содержимое хедера из файла footer.html
+   fetch('footer_kk.html')
+   .then(response => response.text())
+   .then(data => {
+       document.getElementById('footer_kk-placeholder').innerHTML = data;
+   });
 
 // Загружаем содержимое форму из файла form.html
 fetch('form.html')
@@ -58,6 +71,12 @@ fetch('form.html')
         document.getElementById('form-placeholder').innerHTML = data;
     });
 
+    // Загружаем содержимое форму из файла form_kk.html
+fetch('form_kk.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('form_kk-placeholder').innerHTML = data;
+});
     // Загружаем содержимое кнопки застрахованности из файла saqtandyry.html
 fetch('saqtandyry.html')
 .then(response => response.text())
@@ -75,6 +94,24 @@ function closeForm() {
     document.getElementById('saqtandyry-status-form-id').style.display = 'none';
     document.body.style.overflow = 'auto'; // Включить прокрутку страницы
 }
+
+  // Загружаем содержимое кнопки застрахованности из файла saqtandyry_kk.html
+  fetch('saqtandyry_kk.html')
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById('saqtandyry_kk-placeholder').innerHTML = data;
+  });
+     // Функция для открытия формы
+     function openForm() {
+      document.getElementById('saqtandyry_kk-status-form-id').style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Отключить прокрутку страницы
+  }
+  
+  // Функция для закрытия формы
+  function closeForm() {
+      document.getElementById('saqtandyry_kk-status-form-id').style.display = 'none';
+      document.body.style.overflow = 'auto'; // Включить прокрутку страницы
+  }
 
 // Открытие и закрытие мобильного меню
 function toggleMobileMenu() {
@@ -254,22 +291,31 @@ accordions.forEach(accordion => {
     });
 });
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const rusLink = document.getElementById("rus-link");
-    const kazLink = document.getElementById("kaz-link");
-
-    // Add event listeners for the links
-    rusLink.addEventListener("click", function() {
-        rusLink.classList.add("current-language");
-        kazLink.classList.remove("current-language");
+    // язык
+    document.addEventListener("DOMContentLoaded", function() {
+        const rusLink = document.getElementById("rus-link");
+        const kazLink = document.getElementById("kaz-link");
+    
+        // Determine active language based on the URL
+        if (window.location.href.includes("index_kk.html")) {
+            kazLink.classList.add("active-language"); // Highlight Kazakh if on Kazakh page
+        } else {
+            rusLink.classList.add("active-language"); // Default to Russian if not on Kazakh page
+        }
+    
+        // Optional: Event listeners to update active link on click
+        rusLink.addEventListener("click", function() {
+            rusLink.classList.add("active-language");
+            kazLink.classList.remove("active-language");
+        });
+    
+        kazLink.addEventListener("click", function() {
+            kazLink.classList.add("active-language");
+            rusLink.classList.remove("active-language");
+        });
     });
+    
 
-    kazLink.addEventListener("click", function() {
-        kazLink.classList.add("current-language");
-        rusLink.classList.remove("current-language");
-    });
-});
 
 
     // папки в гос закупках

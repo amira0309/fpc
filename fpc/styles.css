@@ -44,34 +44,6 @@ header {
     justify-content: space-between;
 }
 
-/* Языковой переключатель */
-.language-switcher {
-    margin-right: 20px; /* Отступ справа для отделения от логотипа */
-    font-size: 0.9em;
-    font-weight: bold;
-}
-
-/* Обычные ссылки */
-.language-switcher a {
-    color:#012d61; /* Цвет ссылок */
-    text-decoration: none;
-    margin: 0 5px; /* Отступ между ссылками */
-}
-
-/* Ссылка при наведении */
-.language-switcher a:hover {
-    text-decoration: underline;
-}
-
-/* Текущий язык (не ссылка) */
-.language-switcher .current-language {
-    color: white; /* Цвет текущего языка (например, белый) */
-    background-color: #012d61; /* Фон текущего языка */
-    padding: 2px 5px; /* Внутренние отступы для аккуратности */
-    border-radius: 3px; /* Закругленные края */
-}
-
-
 /* Логотип */
 .logo {
     margin-bottom: 10px; 
@@ -1067,17 +1039,38 @@ nav ul li .button {
     }
   }
   
-  .header-extras {
+/* Base container for the language switcher */
+.header-extras {
     display: flex;
-    justify-content: space-between; /* Размещаем элементы по краям */
-    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: flex-end;
     padding: 10px;
+    font-family: Arial, sans-serif;
 }
 
-.language-switcher {
-    font-size: 16px;
-    margin: 0; /* Убираем любые дополнительные отступы */
+/* Style for the language switcher links */
+.language-switcher a {
+    text-decoration: none;
+    color: #666; /* Default color for inactive link */
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: normal;
+    border-radius: 4px;
 }
+
+/* Hover effect */
+.language-switcher a:hover {
+    color: #007bff; /* Hover color */
+    background-color: #f0f0f0; /* Light background on hover */
+}
+
+/* Style for the active language */
+.language-switcher a.active-language {
+    color: #ffffff; /* Text color for active language */
+    background-color: #007bff; /* Background color for active language */
+    font-weight: bold;
+    border-radius: 4px;
+}
+
 
 .button-container {
     margin: 0; /* Убираем любые дополнительные отступы */
