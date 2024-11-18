@@ -270,3 +270,11 @@ document.addEventListener("DOMContentLoaded", function() {
         rusLink.classList.remove("current-language");
     });
 });
+
+
+    // папки в гос закупках
+function toggleFolder(element) {
+    element.classList.toggle("open");
+    let content = element.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
