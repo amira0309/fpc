@@ -13,61 +13,112 @@
     <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
 
     <style>
-    
-        h2 {
-            background-color: #004c8c;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-        p, ul {
-            padding: 0 20px;
-        }
-        ul {
-            list-style-type: none;
-            margin: 10px 0;
-        }
-        ul li {
-            margin: 5px 0;
-        }
-        .content {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h3 {
-            color: #004c8c;
-            font-size: 20px;
-        }
-        .section-title {
-            font-size: 18px;
-            color: #004c8c;
-            margin-top: 20px;
-        }
-        .list-barriers {
-    list-style-type: disc; /* Тип маркера: круг */
-    margin-left: 20px; /* Отступ слева для маркеров */
+/* Container styling */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.list-barriers li {
-    margin-bottom: 5px; /* Расстояние между элементами списка */
+/* Main Heading */
+.content h2 {
+    background-color: #004c8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin: 0 0 30px 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
 }
 
+/* Subheadings */
+.content h3 {
+    color: #004c8c;
+    font-size: 22px;
+    margin: 25px 0 15px;
+    font-weight: 600;
+    text-align: center;
+}
 
+/* Section Title Styling */
+.section-title {
+    font-size: 18px;
+    color: #004c8c;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Text and List Styling */
+.content p {
+    color: #555555;
+    font-size: 1.15em;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.content ul, .content ol {
+    list-style-type: disc;
+    margin: 15px 20px;
+    color: #555555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.content ul li, .content ol li {
+    margin: 8px 0;
+}
+
+/* Highlighted text */
+.highlighted {
+    color: #004c8c;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .content h2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .content h2 {
+        font-size: 22px;
+        padding: 18px;
+    }
+
+    .content h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+footer .container .contact-info {
+    color: #fff;
+}
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
+    <div class="content">
         <h2>Мобильное приложение OneImpact Kazakhstan TB</h2>
 
     
-    <div class="content">
+   
         <p>Мобильное приложение в помощь людям, затронутым туберкулезом OneImpact – разработана партнерством “Остановить ТБ” при поддержке Глобального фонда для борьбы со СПИДом, туберкулезом и малярией.</p>
     
         <p>OneImpact – это цифровое приложение, которое дает возможность сообществам, включая лиц, затронутых туберкулезом, и населению в целом, быть вовлеченными в процесс улучшения качества противотуберкулезных услуг.</p>
