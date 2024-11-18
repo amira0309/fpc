@@ -13,40 +13,139 @@
     <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .container6 {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2, h3 {
-            color: #2a9d8f;
-        }
-        .list1 {
-            margin-left: 20px;
-        }
-        .list1 li {
-            margin-bottom: 5px;
-        }
-        .subsection {
-            margin-top: 15px;
-        }
-        .highlight {
-            font-weight: bold;
-        }
+        /* Section Container */
+.container4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Main Heading */
+.container4 h2 {
+    background-color: #004c8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin: 0 0 30px 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Subheadings */
+.container4 h3 {
+    color: #004c8c;
+    font-size: 22px;
+    margin: 25px 0 15px;
+    padding: 0 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Text and List Styling */
+.container4 p {
+    color: #555555;
+    font-size: 1.15em;
+    line-height: 1.7;
+    padding: 0 20px;
+    margin: 12px 0;
+}
+
+.highlight {
+    color: #004c8c;
+    font-weight: bold;
+}
+
+/* Subsection Container */
+.subsection {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.subsection h3 {
+    color: #004c8c;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 0;
+}
+
+/* List Styling */
+.list1 {
+    list-style-type: disc;
+    margin: 10px 40px;
+    color: #555555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.list1 li {
+    margin: 8px 0;
+}
+
+/* Inner Nested List */
+.list1 .list {
+    list-style-type: circle;
+    margin: 8px 0 8px 20px;
+}
+
+.list1 .list li {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .container4 h2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .container4 h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container4 {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .container4 h2 {
+        font-size: 22px;
+        padding: 18px;
+    }
+
+    .container4 h3 {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .container4 p,
+    .list1,
+    .list1 li {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .subsection {
+        padding: 15px;
+    }
+}
+
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-<div class="container6">
+<div class="container4">
     <h2>ПРАВИЛА ГОСПИТАЛИЗАЦИИ</h2>
 
     <p>Существует два вида госпитализации в стационар: <span class="highlight">плановая</span> и <span class="highlight">экстренная</span>.</p>

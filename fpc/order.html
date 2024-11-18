@@ -14,52 +14,99 @@
 
     <style>
 
+/* Main Container */
 .container7 {
-    max-width: 800px;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Центрирование контейнера */
 }
 
-h2 {
+/* Main Heading */
+.container7 h2 {
+    background-color: #004c8c;
+    color: #ffffff;
     text-align: center;
-    color: #2a9d8f;
-    margin-bottom: 20px;
+    padding: 25px;
+    margin: 0 0 30px 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
 }
 
+/* Schedule Table */
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto 20px; /* Центрирование таблицы */
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
 }
 
 .schedule-table th {
-    background-color: #2a9d8f;
-    color: #fff;
-    padding: 12px;
+    background-color: #004c8c;
+    color: #ffffff;
     font-weight: bold;
-    text-transform: uppercase;
-}
-
-.schedule-table td {
-    padding: 10px;
-    border-bottom: 1px solid #dee2e6;
     text-align: center;
 }
 
 .schedule-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9;
 }
 
+.schedule-table tr:hover {
+    background-color: #e6f0fa;
+}
+
+/* Note Styling */
 .note {
-    font-style: italic;
-    color: #555;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 0.95em;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #004c8c;
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #004c8c;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container7 {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .container7 h2 {
+        font-size: 22px;
+        padding: 18px;
+    }
+
+    .schedule-table th, .schedule-table td {
+        padding: 10px;
+    }
+
+    .note {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+footer .container .contact-info {
+    color: #fff;
 }
 
     </style>

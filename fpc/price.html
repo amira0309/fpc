@@ -44,12 +44,66 @@ main {
     text-align: center;
 }
 
+.container4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.container4 h2 {
+    background-color: #004c8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin: 0 0 30px 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+.document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.document-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.document-list a:hover {
+    color: #007BFF;
+}
+
+.document-list i {
+    font-size: 24px;
+    color: #E74C3C; /* Красный цвет для PDF иконки */
+    margin-right: 10px;
+}
+
+.document-list span {
+    flex-grow: 1;
+}
+
+footer .container .contact-info {
+    color: #fff;
+}
 </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <main>
+        <div class="container4">
         <h2>Прейскурант на платные услуги</h2>
 
         <div class="document-list">
@@ -57,6 +111,7 @@ main {
                 <i class="fas fa-file-pdf"></i>
                 <span>Прейскурант (PDF)</span>
             </a>
+        </div>
         </div>
     </main>
 
