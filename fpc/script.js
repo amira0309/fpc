@@ -226,19 +226,27 @@ function loadNews() {
 // Загружаем новости при загрузке страницы
 window.onload = loadNews;
 
-// текст в ОСМС
+// Текст в ОСМС - Скрипт для аккордеонов
+// Скрипт для аккордеонов с плавной анимацией
 const accordions = document.querySelectorAll(".accordion");
+
 accordions.forEach(accordion => {
     accordion.addEventListener("click", function() {
+        // Переключение класса "active" для текущего аккордеона
         this.classList.toggle("active");
+
+        // Получение следующего элемента .panel для открытия/закрытия
         const panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
+
+        // Если панель скрыта, показать её, иначе скрыть
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.style.display = "block";
         }
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const rusLink = document.getElementById("rus-link");
