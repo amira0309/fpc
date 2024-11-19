@@ -16,11 +16,7 @@ body {
     padding: 20px;
 }
 
-/* Общие стили для хедера */
-header {
-    font-weight: bold;
 
-}
 
 .container {
     padding: 10px 0;
@@ -34,7 +30,7 @@ header {
     margin-left: 10px;
 }
 .logo img {
-    max-width: 30px;
+    max-width: 60px;
 }
 
 /* Контейнер для верхней части хедера */
@@ -139,14 +135,13 @@ header {
 }
 
 .center-info h1 {
-    font-size: 0.7em;
+    font-size: 1em;
     color: #012d61;
     margin-right: 10px;
 }
 
 .center-info p {
     color:  #576074;
-    font-weight: bold;
 }
 
 .contact-info {
@@ -161,7 +156,6 @@ header {
 .contact-info a {
     color:  #576074;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .contact-info a:hover {
@@ -547,7 +541,7 @@ section.about-us, section.news {
     background-color: #e3f2fd; /* Светло-голубой фон */
     padding: 20px;
     border-radius: 10px;
-    margin-top: 20px; /* Отступ сверху */
+    margin-top: 40px; /* Отступ сверху */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень для эффекта */
 }
 
@@ -623,21 +617,20 @@ section.about-us, section.news {
     background: #12a1c5;
 }
 .hero {
-    text-align: center;
-    padding: 50px 0;
-    background: #e3f2fd;
-    color: #333;
+    border-left: 5px solid #4caf50;
+    padding: 20px 15px;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    background-color: #f9f9f9;
 }
 
-.hero h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.hero p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
 
 .hero .btn {
     padding: 10px 20px;
@@ -1043,7 +1036,6 @@ nav ul li .button {
 .header-extras {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
     font-family: Arial, sans-serif;
 }
 
