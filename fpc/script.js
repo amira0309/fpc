@@ -77,41 +77,64 @@ fetch('form_kk.html')
 .then(data => {
     document.getElementById('form_kk-placeholder').innerHTML = data;
 });
-    // Загружаем содержимое кнопки застрахованности из файла saqtandyry.html
+
+// Загружаем содержимое кнопки застрахованности из файла saqtandyry.html
 fetch('saqtandyry.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('saqtandyry-placeholder').innerHTML = data;
-});
-   // Функция для открытия формы
-   function openForm() {
-    document.getElementById('saqtandyry-status-form-id').style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Отключить прокрутку страницы
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Ошибка загрузки файла: ${response.statusText}`);
+        }
+        return response.text();
+    })
+    .then(data => {
+        const placeholder = document.getElementById('saqtandyry-placeholder');
+        if (placeholder) {
+            placeholder.innerHTML = data;
+        } else {
+            console.error("Элемент 'saqtandyry-placeholder' не найден");
+        }
+    })
+    .catch(error => console.error('Ошибка:', error));
+
+// Функция для открытия формы
+function openForm() {
+    const formContainer = document.getElementById('saqtandyry-status-form-id');
+    if (formContainer) {
+        formContainer.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Отключить прокрутку страницы
+    } else {
+        console.error("Элемент 'saqtandyry-status-form-id' не найден");
+    }
 }
 
 // Функция для закрытия формы
 function closeForm() {
-    document.getElementById('saqtandyry-status-form-id').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Включить прокрутку страницы
+    const formContainer = document.getElementById('saqtandyry-status-form-id');
+    if (formContainer) {
+        formContainer.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Включить прокрутку страницы
+    } else {
+        console.error("Элемент 'saqtandyry-status-form-id' не найден");
+    }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.status-button');
+    const closeHandle = document.querySelector('.handle');
 
-  // Загружаем содержимое кнопки застрахованности из файла saqtandyry_kk.html
-  fetch('saqtandyry_kk.html')
-  .then(response => response.text())
-  .then(data => {
-      document.getElementById('saqtandyry_kk-placeholder').innerHTML = data;
-  });
-     // Функция для открытия формы
-     function openForm() {
-      document.getElementById('saqtandyry_kk-status-form-id').style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Отключить прокрутку страницы
-  }
-  
-  // Функция для закрытия формы
-  function closeForm() {
-      document.getElementById('saqtandyry_kk-status-form-id').style.display = 'none';
-      document.body.style.overflow = 'auto'; // Включить прокрутку страницы
-  }
+    if (button) {
+        button.addEventListener('click', openForm);
+    } else {
+        console.error("Кнопка '.status-button' не найдена");
+    }
+
+    if (closeHandle) {
+        closeHandle.addEventListener('click', closeForm);
+    } else {
+        console.error("Кнопка закрытия '.handle' не найдена");
+    }
+});
+
+
 
 // Открытие и закрытие мобильного меню
 function toggleMobileMenu() {

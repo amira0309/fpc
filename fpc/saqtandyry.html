@@ -10,8 +10,8 @@
         .status-button {
             background: #61a832;
             border: 2px solid #61a832;
-            display: block !important;
-    visibility: visible !important;
+            display: block;
+    visibility: visible;
             position: fixed;
             bottom: 10px;
             right: 10px;
@@ -237,6 +237,18 @@
     }
 }
 
+#saqtandyry-status-form-id {
+    display: none; /* Скрыт по умолчанию */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 550px;
+    background-color: white;
+    z-index: 1000;
+}
+
 
     </style>
 </head>
@@ -273,6 +285,17 @@
             document.getElementById('saqtandyry-status-form-id').style.display = 'none';
             document.body.style.overflow = 'auto'; // Включить прокрутку страницы
         }
+
+        function openForm() {
+    console.log('Функция openForm вызвана');
+    const formContainer = document.getElementById('saqtandyry-status-form-id');
+    if (formContainer) {
+        formContainer.style.display = 'block';
+        console.log('Форма отображена');
+    } else {
+        console.error('Элемент с ID "saqtandyry-status-form-id" не найден');
+    }
+}
 
 
     </script>
