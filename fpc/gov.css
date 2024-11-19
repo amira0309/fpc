@@ -1,6 +1,8 @@
 /* Общие стили */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Стили для заголовка */
@@ -12,22 +14,25 @@ h2 {
 
 /* Контейнер для ссылок */
 .resource-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Use flexbox to align items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: center; /* Center the links horizontally */
+    gap: 20px; /* Space between links */
     margin: 20px;
+    padding: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
 }
 
 /* Стили для каждой ссылки и изображения */
 .resource-links a {
     text-decoration: none;
     display: block;
+    width: 150px; /* Default width */
 }
 
 .resource-links img {
-    width: 150px;
-    height: 100px; /* Одинаковая высота для всех картинок */
+    width: 100%;
+    height: 100px; /* Maintain consistent height for all images */
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -36,4 +41,78 @@ h2 {
 /* Эффект при наведении */
 .resource-links img:hover {
     transform: scale(1.05);
+}
+
+.resource-item {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: 150px; /* Default width for each item */
+    height: 150px; /* Default height for each item */
+    overflow: hidden; /* Ensures content stays inside boundaries */
+}
+
+.resource-title {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Align text in the center */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    color: #6c757d; /* Gray text color */
+    padding: 10px 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .resource-links {
+        gap: 15px; /* Reduce space between items on medium screens */
+    }
+
+    .resource-item {
+        width: 130px; /* Smaller width for medium screens */
+        height: 130px; /* Smaller height for medium screens */
+    }
+
+    .resource-title {
+        font-size: 14px; /* Adjust text size for smaller screens */
+        padding: 8px 12px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .resource-links {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    .resource-item {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 300px; /* Limit max width */
+        height: auto; /* Let height adjust naturally */
+    }
+
+    .resource-title {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-links {
+        gap: 5px; /* Minimal gap on very small screens */
+    }
+
+    .resource-item {
+        width: 100%; /* Full width for very small screens */
+        height: auto; /* Natural height adjustment */
+    }
+
+    .resource-title {
+        font-size: 12px; /* Smaller text size for very small screens */
+        padding: 6px 10px; /* Reduce padding further */
+    }
 }

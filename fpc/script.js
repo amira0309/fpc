@@ -292,28 +292,22 @@ accordions.forEach(accordion => {
 });
 
     // язык
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const rusLink = document.getElementById("rus-link");
         const kazLink = document.getElementById("kaz-link");
     
-        // Determine active language based on the URL
+        // Check the URL to determine the active language
         if (window.location.href.includes("index_kk.html")) {
-            kazLink.classList.add("active-language"); // Highlight Kazakh if on Kazakh page
-        } else {
-            rusLink.classList.add("active-language"); // Default to Russian if not on Kazakh page
-        }
-    
-        // Optional: Event listeners to update active link on click
-        rusLink.addEventListener("click", function() {
-            rusLink.classList.add("active-language");
-            kazLink.classList.remove("active-language");
-        });
-    
-        kazLink.addEventListener("click", function() {
+            // Kazakh page
             kazLink.classList.add("active-language");
             rusLink.classList.remove("active-language");
-        });
+        } else {
+            // Default to Russian page
+            rusLink.classList.add("active-language");
+            kazLink.classList.remove("active-language");
+        }
     });
+    
     
 
 

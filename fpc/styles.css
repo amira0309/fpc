@@ -1039,7 +1039,7 @@ nav ul li .button {
     }
   }
   
-/* Base container for the language switcher */
+/* Base container style */
 .header-extras {
     display: flex;
     justify-content: flex-end;
@@ -1047,26 +1047,26 @@ nav ul li .button {
     font-family: Arial, sans-serif;
 }
 
-/* Style for the language switcher links */
+/* Default style for language links */
 .language-switcher a {
     text-decoration: none;
-    color: #666; /* Default color for inactive link */
+    color: #666; /* Default color for inactive language */
     padding: 5px 10px;
     transition: color 0.3s, background-color 0.3s;
     font-weight: normal;
     border-radius: 4px;
 }
 
-/* Hover effect */
+/* Hover effect for links */
 .language-switcher a:hover {
-    color: #007bff; /* Hover color */
-    background-color: #f0f0f0; /* Light background on hover */
+    color: #007bff;
+    background-color: #f0f0f0;
 }
 
-/* Style for the active language */
+/* Active language style */
 .language-switcher a.active-language {
-    color: #ffffff; /* Text color for active language */
-    background-color: #007bff; /* Background color for active language */
+    color: #ffffff;
+    background-color: #007bff;
     font-weight: bold;
     border-radius: 4px;
 }
@@ -1137,3 +1137,14 @@ footer .container .contact-info {
     opacity: 0.9;
   }
   
+  @media (max-width: 768px) { /* Mobile devices */
+    .button-container {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center align the buttons */
+    }
+  
+    .button {
+      width: 100%; /* Make buttons full width */
+      max-width: 300px; /* Set a maximum width */
+    }
+  }
