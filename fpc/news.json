@@ -134,6 +134,15 @@
     },
 
     {
+        "title": "Пациент в центре внимания: стимулы на пути к качеству и безопасности   ",
+        "date": "17.09.2024",
+        "video": "assets/images/news/conference.jpg",
+        "type": "image",
+        "link": "conference.html"
+    },
+
+
+    {
         "title": "Семейная династия  ",
         "date": "16.09.2024",
         "video": "assets/images/news/nesveldinovy.jpg",
@@ -154,7 +163,7 @@
         "date": "12.09.2024",
         "video": "assets/images/news/mio.jpg",
         "type": "image",
-        "link": "corruption.html"
+        "link": "mio.html"
     },
 
     {
