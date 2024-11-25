@@ -22,12 +22,6 @@ showSlide(currentIndex);
 setInterval(nextSlide, 5000);
 
 
-// Загружаем содержимое хедера из файла header.html
-fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-    });
 
     // Загружаем содержимое хедера из файла header_kk.html
 fetch('header_kk.html')
@@ -37,25 +31,12 @@ fetch('header_kk.html')
 });
 
 
-    // Загружаем содержимое gov из файла gov.html
-fetch('gov.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('gov-placeholder').innerHTML = data;
-});
-
    // Загружаем содержимое gov из файла gov_kk.html
    fetch('gov_kk.html')
    .then(response => response.text())
    .then(data => {
        document.getElementById('gov_kk-placeholder').innerHTML = data;
    });
-    // Загружаем содержимое хедера из файла footer.html
-fetch('footer.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
-});
 
    // Загружаем содержимое хедера из файла footer.html
    fetch('footer_kk.html')
@@ -64,12 +45,6 @@ fetch('footer.html')
        document.getElementById('footer_kk-placeholder').innerHTML = data;
    });
 
-// Загружаем содержимое форму из файла form.html
-fetch('form.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('form-placeholder').innerHTML = data;
-    });
 
     // Загружаем содержимое форму из файла form_kk.html
 fetch('form_kk.html')
@@ -250,20 +225,24 @@ function scrollToTop() {
   }
   
 
-  // новости
 
 
-function loadNews() {
-    fetch('news.json')
+  function loadLatestNews() {
+    fetch('news_kk.json')
         .then(response => response.json())
         .then(data => {
-            const newsPlaceholder = document.getElementById('news-placeholder');
-            data.slice(0, 4).forEach(news => {
+            const newsPlaceholder = document.getElementById('news_kk-placeholder');
+            newsPlaceholder.innerHTML = ''; // Очистка контейнера перед добавлением новостей
+
+            // Берем первые 4 новости (сначала массива)
+            const latestNews = data.slice(0, 4); // Берем первые 4 записи
+
+            latestNews.forEach(news => {
                 const newsCard = document.createElement('div');
                 newsCard.classList.add('news-card');
                 
                 // Определяем контент: изображение или видео
-                let mediaContent;
+                let mediaContent = '';
                 if (news.type === 'video') {
                     mediaContent = `
                         <video class="news-card-image" autoplay muted loop playsinline>
@@ -291,32 +270,12 @@ function loadNews() {
         .catch(error => console.error('Ошибка загрузки новостей:', error));
 }
 
-// Загружаем новости при загрузке страницы
-window.onload = loadNews;
-
- 
+// Вызов функции для загрузки новостей
+loadLatestNews();
 
 
-// Текст в ОСМС - Скрипт для аккордеонов
-// Скрипт для аккордеонов с плавной анимацией
-const accordions = document.querySelectorAll(".accordion");
-
-accordions.forEach(accordion => {
-    accordion.addEventListener("click", function() {
-        // Переключение класса "active" для текущего аккордеона
-        this.classList.toggle("active");
-
-        // Получение следующего элемента .panel для открытия/закрытия
-        const panel = this.nextElementSibling;
-
-        // Если панель скрыта, показать её, иначе скрыть
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-});
+// Вызов функции для загрузки новостей
+loadLatestNews();
 
     // язык
     document.addEventListener("DOMContentLoaded", function () {
@@ -345,3 +304,24 @@ function toggleFolder(element) {
     let content = element.nextElementSibling;
     content.style.display = content.style.display === "block" ? "none" : "block";
 }
+
+// Текст в ОСМС - Скрипт для аккордеонов
+// Скрипт для аккордеонов с плавной анимацией
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(accordion => {
+    accordion.addEventListener("click", function() {
+        // Переключение класса "active" для текущего аккордеона
+        this.classList.toggle("active");
+
+        // Получение следующего элемента .panel для открытия/закрытия
+        const panel = this.nextElementSibling;
+
+        // Если панель скрыта, показать её, иначе скрыть
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+});
