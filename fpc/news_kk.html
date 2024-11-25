@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Восточно-Казахстанский фтизиопульмонологический центр. Лечение и диагностика туберкулеза и легочных заболеваний.">
+    <title>ВКО Фтизиопульмонологический центр</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключаем иконку (favicon) -->
+    <link rel="icon" href="assets/images/LOGO.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
+
+    <style>
+   /* Container styling for news */
+.news-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Main Heading */
+.news-container h2 {
+    background-color: #004c8c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin: 0 0 30px 0;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+/* News item styling */
+.news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.news-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-content {
+    flex-grow: 1;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #004c8c;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.news-title:hover {
+    text-decoration: underline;
+}
+
+.news-date {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Highlighted text styling */
+.highlight {
+    color: #004c8c;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .news-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .news-title {
+        font-size: 16px;
+    }
+
+    .news-date {
+        font-size: 13px;
+    }
+}
+
+.scroll-button {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    background-color: #004c8c; /* Темный синий цвет */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.scroll-button:hover {
+    background-color: #003366; /* Более темный синий при наведении */
+}
+
+.top-button {
+    bottom: 80px; /* Расположение кнопки сверху страницы */
+    right: 20px;
+}
+
+.bottom-button {
+    bottom: 20px; /* Расположение кнопки снизу страницы */
+    right: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="header_kk-placeholder"></div>
+    <div class="news-container">
+<h2>НОВОСТИ</h2>
+   
+        <div class="news-item">
+        <img src="assets/images/news/seminar.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="seminar_kk.html" class="news-title">Фтизиопульмонологиялық орталықтың комплаенс-офицері Ольга Стародубцева «Кәсіби мінез-құлық медициналық этикасы кодексі және атқаратын лауазымына қарамастан ЖҚКО қызметкерлерінің медициналық бағыныстылығы» тақырыбында семинар өткізді.</a>
+            <p class="news-date">28.10.2024</p>
+    </div>
+        </div>
+    </div>
+    
+    <div class="news-container">
+        <div class="news-item">
+        <img src="assets/images/news/prazdnik.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="prazdnik.html" class="news-title">В канун одного из самых торжественных праздников страны - Дня Республики сотрудники нашего центра были отмечены ведомственными наградами.</a>
+            <p class="news-date">24.10.2024</p>
+    </div>
+        </div>
+    </div>
+
+  
+    <div class="news-container">
+        <div class="news-item">
+        <img src="assets/images/news/training.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="training.html" class="news-title">Ресурсы для успеха: эффективная работа в условиях развития Партнерства Стоп ТБ
+            </a>
+            <p class="news-date">18.10.2024</p>
+    </div>
+        </div>
+    </div>
+
+    <div class="news-container">
+        <div class="news-item">
+        <img src="assets/images/news/results.jpg" alt="Изображение новости" class="news-image">
+        <div class="news-content">
+            <a href="results.html" class="news-title">Итоги противотуберкулезных мероприятий за девять месяцев 2024 года обсуждены на заседании Координационного совета Управления здравоохранения Восточно-Казахстанской области.
+            </a>
+            <p class="news-date">08.10.2024</p>
+    </div>
+        </div>
+    </div>
+
+    <div class="news-container">
+      <div class="news-item">
+      <img src="assets/images/news/monitoring.jpg" alt="Изображение новости" class="news-image">
+      <div class="news-content">
+          <a href="monitoring.html" class="news-title">Руководитель ситуационного центра ВК ОФПЦ Омирали Рамазанов в рамках мониторингового визита нашей группы МиО по г. Усть-Каменогорск провел очередное обучение коллег областного центра – Левобережная клиника, Моя семейная амбулатория, ГП  №1, ГП №2, Денсаулык, Ем Алу плюс, Амбулаторный центр.
+          </a>
+          <p class="news-date">08.10.2024</p>
+  </div>
+      </div>
+  </div>
+
+  <div class="news-container">
+    <div class="news-item">
+          <!-- Отображаем видео как обложку -->
+      <video class="news-image" muted autoplay loop playsinline>
+            <source src="assets/images/news/video/genexpert.mp4" type="video/mp4">
+            Ваш браузер не поддерживает тег video.
+        </video>
+        <div class="news-content">
+            <a href="genexpert.html" class="news-title">
+              Об ускоренном методе выявления туберкулеза GeneХpert рассказывает областной координатор лабораторной службы группы МиО, врач бактериолог Ляззат Бигалиева
+            </a>
+            <p class="news-date">4.10.2024</p>
+        </div>
+    </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/tolebayeva.svg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="tolebayeva.html" class="news-title">Сегодня мы бы хотели поделиться словами благодарности от нашей пациентки, которая прошла сложный путь к полному выздоровлению и выражает благодарность всему персоналу центра фтизиопульмонологии за их бесконечное терпение, поддержку и профессионализм.
+      </a>
+      <p class="news-date">03.10.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+    <!-- Отображаем видео как обложку -->
+    <video class="news-image" muted autoplay loop playsinline>
+          <source src="assets/images/news/video/kaskad.mp4" type="video/mp4">
+          Ваш браузер не поддерживает тег video.
+      </video>
+      <div class="news-content">
+          <a href="kaskad.html" class="news-title">
+            В центре фтизиопульмонологии ВКО риск-менеджер Мадина Альжапарова использовала каскадный метод для передачи коллегам ценнейшей информации, полученной во время участия в международной конференции "Пациент в центре внимания", которая недавно прошла в городе Астана. Насыщенная двухдневная программа конференции охватила множество актуальных вопросов здравоохранения, включая инновационные технологии, качество медицинских услуг и права пациентов.
+          </a>
+          <p class="news-date">2.10.2024</p>
+      </div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/gold-age.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="gold-age.html" class="news-title">Сегодня в Казахстане отмечается Международный день пожилых людей, который во всем мире празднуется с 1 октября 1991 года, провозглашённый на 45-й сессии Генеральной Ассамблеи ООН. Этот день напоминает нам о значении пожилых людей в обществе и важности уважения к их опыту и мудрости.
+      </a>
+      <p class="news-date">01.10.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/insurance.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="insurance.html" class="news-title">Страхование профессиональной ответственности медицинских работников — важный шаг к повышению качества медицинских услуг и защите прав как пациентов, так и медицинских работников. Новый приказ, утвержденный Минздравом РК, вступит в силу 23 октября 2024 года, и его реализация потребует серьезной подготовки специалистов в области медицинского страхования.
+      </a>
+      <p class="news-date">30.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/vakr.svg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="vakr.html" class="news-title">В фтизиопульмонологическом центре Восточно-Казахстанской области с 10 октября по 10 ноября 2024 года будет проводиться внутренний анализ коррупционных рисков! 
+      </a>
+      <p class="news-date">30.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/aes.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="aes.html" class="news-title">Члены народного штаба за строительство АЭС встретились с коллективом центра фтизиопульмонологии ВКО
+      </a>
+      <p class="news-date">27.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/ridder.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="ridder.html" class="news-title">Плановый мониторинговый визит в городскую больницу города Риддер совершен группой МиО центра фтизиопульмонологии ВКО.
+      </a>
+      <p class="news-date">25.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/razbor.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="razbor.html" class="news-title">Разбор клинических случаев туберкулеза — важный этап в борьбе с заболеванием, направленный на ранее выявление, диагностику и лечение. 
+      </a>
+      <p class="news-date">23.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/learning1.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="learning.html" class="news-title">Не пропустить патологию
+      </a>
+      <p class="news-date">20.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+      <!-- Отображаем видео как обложку -->
+      <video class="news-image" muted autoplay loop playsinline>
+          <source src="assets/images/news/video/intern.mp4" type="video/mp4">
+          Ваш браузер не поддерживает тег video.
+      </video>
+      <div class="news-content">
+          <a href="interny.html" class="news-title">Цикл фтизиатрии для интернов НАО «МУС»</a>
+          <p class="news-date">19.09.2024</p>
+      </div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/prof.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="prof.html" class="news-title">В центре фтизиопульмонологии состоялась встреча  по разъяснению норм приказов Министерства труда и социальной защиты населения РК с руководителем Управления государственной инспекции труда по ВКО Бахытбеком Кизатовым, главным специалистом Управления государственной инспекции труда по ВКО Асланбеком Кабаевым, руководителем отдела пенсионного и социального обеспечения Департамента комитета труда по ВКО Мариной Шароновой, директором ТОО Республиканский научно-исследовательского института по охране труда Талгатом Немереновым и главным специалистом планового отдела УЗ ВКО Назирой Тюменбаевой.
+      </a>
+      <p class="news-date">18.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/nesveldinovy.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="nesveldinovy.html" class="news-title">Семейная династия 
+      </a>
+      <p class="news-date">16.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/corruption.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="corruption.html" class="news-title">Ознакомились с Политикой противодействия коррупции
+      </a>
+      <p class="news-date">13.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/mio.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="mio.html" class="news-title">Чтобы помощь противотуберкулезная была качественной
+      </a>
+      <p class="news-date">12.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/risk.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="risk.html" class="news-title">Управление рисками в организациях здравоохранения
+      </a>
+      <p class="news-date">09.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/poslanie.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="poslanie.html" class="news-title">Сегодня на совместном заседании палат Парламента Касым-Жомарт Токаев выступил с ежегодным Посланием народу Казахстана "Справедливый Казахстан: закон и порядок, экономический рост, общественный оптимизм".
+      </a>
+      <p class="news-date">02.09.2024</p>
+</div>
+  </div>
+</div>
+
+<div class="news-container">
+  <div class="news-item">
+  <img src="assets/images/news/school.jpg" alt="Изображение новости" class="news-image">
+  <div class="news-content">
+      <a href="school.html" class="news-title">Акция "Идем в школу вместе!"
+      </a>
+      <p class="news-date">02.09.2024</p>
+</div>
+  </div>
+</div>
+<!-- Кнопка прокрутки вверх -->
+<button onclick="scrollToTop()" class="scroll-button top-button">↑</button>
+
+<!-- Кнопка прокрутки вниз -->
+<button onclick="scrollToBottom()" class="scroll-button bottom-button">↓</button>
+
+    
+
+<div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

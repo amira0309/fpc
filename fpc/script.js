@@ -249,7 +249,8 @@ function scrollToTop() {
     });
   }
   
-// новости
+
+  // новости
 
 
 function loadNews() {
@@ -292,6 +293,47 @@ function loadNews() {
 
 // Загружаем новости при загрузке страницы
 window.onload = loadNews;
+
+ // новости kaz v
+ function loadNews() {
+    fetch('news_kk.json')
+        .then(response => response.json())
+        .then(data => {
+            const newsPlaceholder = document.getElementById('news_kk-placeholder');
+            data.slice(0, 4).forEach(news => {
+                const newsCard = document.createElement('div');
+                newsCard.classList.add('news_kk-card');
+                
+                // Определяем контент: изображение или видео
+                let mediaContent;
+                if (news.type === 'video') {
+                    mediaContent = `
+                        <video class="news-card-image" autoplay muted loop playsinline>
+                            <source src="${news.image}" type="video/mp4">
+                            Ваш браузер не поддерживает тег video.
+                        </video>
+                    `;
+                } else if (news.type === 'image') {
+                    mediaContent = `<img src="${news.image}" alt="${news.title}" class="news-card-image">`;
+                }
+
+                // Заполняем HTML-контент карточки новости
+                newsCard.innerHTML = `
+                    ${mediaContent}
+                    <div class="news-card-content">
+                        <a href="${news.link}" class="news-card-title">${news.title}</a>
+                        <p class="news-card-date">${news.date}</p>
+                    </div>
+                `;
+
+                // Добавляем карточку в контейнер
+                newsPlaceholder.appendChild(newsCard);
+            });
+        })
+        .catch(error => console.error('Ошибка загрузки новостей:', error));
+}
+
+
 
 // Текст в ОСМС - Скрипт для аккордеонов
 // Скрипт для аккордеонов с плавной анимацией
