@@ -102,27 +102,27 @@
     },
 
     {
-        "title": "Разбор клинических случаев туберкулеза — важный этап в борьбе с заболеванием, направленный на ранее выявление, диагностику и лечение. ",
+        "title": "Туберкулездің клиникалық жағдайларын талдау - аурумен күрестегі бұрын анықтауға, диагностикалауға және емдеуге бағытталған маңызды кезең.",
         "date": "23.09.2024",
         "image": "assets/images/news/razbor.jpg",
         "type": "image",
-        "link": "razbor.html"
+        "link": "razbor_kk.html"
     },
 
     {
-        "title": "Не пропустить патологию ",
+        "title": "Патологияны жібермеу",
         "date": "20.09.2024",
         "image": "assets/images/news/learning.jpg",
         "type": "image",
-        "link": "learning.html"
+        "link": "learning_kk.html"
     },
 
     {
-        "title": "Цикл фтизиатрии для интернов НАО «МУС» ",
+        "title": "«СМУ» КЕАҚ интерндеріне арналған фтизиатрия циклі.   ",
         "date": "19.09.2024",
         "video": "assets/images/news/video/intern.mp4",
         "type": "video",
-        "link": "interny.html"
+        "link": "interny_kk.html"
     },
 
     {
