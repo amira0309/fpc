@@ -12,37 +12,109 @@
     <link rel="icon" href="assets/images/LOGO.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/LOGO.jpg" type="image/x-icon"> <!-- Для некоторых браузеров -->
     <style>
-        .navbar {
-            display: flex; /* Используем flex для отображения кнопок */
-            flex-direction: column; /* Размещаем кнопки вертикально */
-            padding: 0; /* Убираем отступы */
-            margin: 0; /* Убираем внешние отступы */
-        }
+.hero {
+    background-color: #f8f9fa;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .navbar li {
-            list-style-type: none; /* Убираем маркеры */
-            margin: 5px 0; /* Уменьшаем отступы между кнопками */
-        }
+.hero p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
 
-        .navbar a {
-            display: inline-block; /* Делаем ссылку блочным элементом */
-            padding: 10px 15px; /* Уменьшаем отступы внутри кнопки */
-            color: white; /* Цвет текста */
-            background-color: #295b91; /* Синий фон для кнопок */
-            text-decoration: none; /* Убираем подчеркивание */
-            border-radius: 5px; /* Закругленные углы */
-            transition: background-color 0.3s; /* Плавный переход цвета фона */
-            width: 50%; /* Кнопки занимают всю ширину контейнера */
-            font-size: 14px; /* Уменьшаем размер шрифта */
-        }
+/* Main Content Section */
+.content {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 16px;
+    line-height: 1.8;
+}
 
-        .navbar a:hover {
-            background-color: #0056b3; /* Более темный синий цвет при наведении */
-        }
+.content h2 {
+    color: #004c8c;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin: 10px 0 10px 20px;
+    padding-left: 10px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+/* Navigation Bar */
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar li {
+    margin: 10px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #004c8c;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #004c8c;
+    color: #ffffff;
+}
+
+/* Footer Placeholder */
+#footer-placeholder {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 .hero p, .content  {
+        font-size: 14px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
+    <div class="content">
         <section class="hero">
             <p>Приветствуем вас на страницах нашего официального сайта. Восточно-Казахстанский областной фтизиопульмонологический центр один из старейших медицинских учреждений своего профиля в Республике.
                 Фтизиопульмонологический центр был и остается современным, высококвалифицированным сообществом врачей и медсестер. Сотрудникам Центра свойственен дух энтузиазма, профессиональное мастерство, умение работать в команде и стремление к новым знаниям.</p>
@@ -51,7 +123,7 @@
             Готовы ответить на все интересующие Вас вопросы и помочь в оказании квалифицированной и специализированной помощи.
             </p>
     </section>
-
+<h2>Отделения</h2>
     <nav>
         <ul class="navbar">
             <li><a href="department1.html">Отделение легочной хирургии, внелегочного туберкулеза и восстановительного лечения</a></li>
@@ -65,7 +137,7 @@
         </ul>
     </nav>
 
-
+    </div>
     <div id="footer-placeholder"></div>
     <script src="script.js"></script>
 
