@@ -1072,8 +1072,8 @@ nav ul li .button {
     border-radius: 4px;
 }
 
-/* Hover effect for links */
-.language-switcher a:hover {
+/* Hover effect for inactive links */
+.language-switcher a:not(.active-language):hover {
     color: #007bff;
     background-color: #f0f0f0;
 }
@@ -1084,7 +1084,9 @@ nav ul li .button {
     background-color: #007bff;
     font-weight: bold;
     border-radius: 4px;
+    pointer-events: none; /* Чтобы нельзя было кликнуть на активный язык */
 }
+
 
 
 .button-container {

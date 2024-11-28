@@ -49,6 +49,91 @@
     font-weight: bold;
     border-radius: 10px 10px 0 0;
 }
+
+.documents-section h2 {
+    background-color: #004c8c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 24px;
+}
+
+.document-list {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.document-list li {
+    margin: 10px 0;
+}
+
+.document-list li a {
+    color: #004c8c;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.document-list li a i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Specific colors for document icons */
+.document-list li a i.fa-file-word {
+    color: #2a5699; /* Blue for Word documents */
+}
+
+.document-list li a i.fa-file-pdf {
+    color: #d9534f; /* Red for PDF documents */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .documents-section {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .documents-section h2 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .document-list {
+        padding: 0 10px;
+    }
+
+    .document-list li a {
+        font-size: 1em;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+ .documents-section {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+ .documents-section h2 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+
+    .document-list {
+        padding: 0 10px;
+    }
+
+    .document-list li a {
+        font-size: 1em;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -56,7 +141,7 @@
 <div id="header_kk-placeholder"></div>
 <div class="container4">
 <h2>
-    Антикоррупционная политика
+    Сыбайлас жемқорлыққа қарсы саясат
 </h2>
 <div class="photo">
     <img src="assets/images/antikk.jpg" alt="Антикоррупционная политика">
@@ -73,6 +158,18 @@
 <div class="photo">
     <img src="assets/images/antikk3.jpg" alt="Антикоррупционная политика">
 </div>
+
+<section class="documents-section">
+    <h2>Құжаттар</h2>
+    <ul class="document-list">
+        <li>
+            <a href="assets/documents/противодействие_коррупции/ПОЛИТИКА_ПОЛИТИКА_ПРОТИВ_КОРРУП_каз.pdf" target="_blank">
+                <i class="fas fa-file-pdf"></i>
+                <span>Сыбайлас жемқорлыққа қарсы саясат.pdf (PDF)</span>
+            </a>
+        </li>
+    </ul>
+</section>
 
 
 </div>

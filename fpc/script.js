@@ -319,21 +319,20 @@ accordions.forEach(accordion => {
 });
 
     // язык
-    document.addEventListener("DOMContentLoaded", function () {
-        const rusLink = document.getElementById("rus-link");
-        const kazLink = document.getElementById("kaz-link");
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentUrl = window.location.pathname; // Получить текущий путь URL
+        const languageLinks = document.querySelectorAll('.language-switcher a');
     
-        // Check the URL to determine the active language
-        if (window.location.href.includes("index_kk.html")) {
-            // Kazakh page
-            kazLink.classList.add("active-language");
-            rusLink.classList.remove("active-language");
-        } else {
-            // Default to Russian page
-            rusLink.classList.add("active-language");
-            kazLink.classList.remove("active-language");
-        }
+        languageLinks.forEach(link => {
+            // Если URL совпадает со ссылкой, добавляем класс active-language
+            if (link.getAttribute('href') === currentUrl) {
+                link.classList.add('active-language');
+            } else {
+                link.classList.remove('active-language');
+            }
+        });
     });
+    
     
     
 
