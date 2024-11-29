@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <ul>
+        <li><a href="#news-section">Manage News</a></li>
+        <li><a href="#pages-section">Manage Pages</a></li>
+        <li><a href="#contacts-section">Manage Contacts</a></li>
+        <li><a href="#feedback-section">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Управление новостями -->
+    <section id="news-section">
+        <h2>Manage News</h2>
+        <div id="news-list"></div>
+        <button onclick="openNewsForm()">Add News</button>
+      
+        <!-- Модальное окно для добавления/редактирования новостей -->
+        <div id="news-modal" class="modal hidden">
+          <div class="modal-content">
+            <h3 id="modal-title">Add News</h3>
+            <form id="news-form">
+              <label>
+                Title:
+                <input type="text" id="news-title" required>
+              </label>
+              <label>
+                Date:
+                <input type="date" id="news-date" required>
+              </label>
+              <label>
+                Content Type:
+                <select id="news-type">
+                  <option value="image">Image</option>
+                  <option value="video">Video</option>
+                </select>
+              </label>
+              <label>
+                File (Image/Video):
+                <input type="file" id="news-media" accept="image/*,video/*" onchange="previewMedia(event)">
+              </label>
+              <div id="media-preview"></div>
+              <label>
+                Link:
+                <input type="text" id="news-link" placeholder="Enter link (e.g., corruption.html)">
+              </label>
+              <button type="submit">Save</button>
+              <button type="button" onclick="closeNewsForm()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+    <!-- Управление страницами -->
+    <section id="pages-section">
+      <h2>Manage Pages</h2>
+      <div id="pages-list"></div>
+    </section>
+
+    <!-- Управление контактами -->
+    <section id="contacts-section">
+      <h2>Manage Contacts</h2>
+      <form id="contacts-form">
+        <label>
+          Address:
+          <input type="text" id="contact-address">
+        </label>
+        <label>
+          Phone:
+          <input type="text" id="contact-phone">
+        </label>
+        <button type="submit">Save Contacts</button>
+      </form>
+    </section>
+
+    <!-- Обратная связь -->
+    <section id="feedback-section">
+      <h2>Feedback</h2>
+      <div id="feedback-list"></div>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
