@@ -325,3 +325,10 @@ accordions.forEach(accordion => {
         }
     });
 });
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
