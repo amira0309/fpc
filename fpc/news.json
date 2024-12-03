@@ -1,9 +1,16 @@
 [
+    {
+        "title": "Правильно собранная мокрота — залог получения достоверных результатов",
+        "date": "03.12.2024",
+        "image": "assets/images/news/sbor.jpg",
+        "type": "image",
+        "link": "sbor.html"
+    },
 
     {
         "title": "Семинар по работе в информационной системе Национального регистра больных туберкулезом прошел в центре фтизиопульмонологии",
         "date": "11.11.2024",
-        "video": "assets/images/nrbt.jpg",
+        "image": "assets/images/news/nrbt.jpg",
         "type": "image",
         "link": "nrbt.html"
     },

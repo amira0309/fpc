@@ -351,3 +351,14 @@ function toggleFolder(element) {
     let content = element.nextElementSibling;
     content.style.display = content.style.display === "block" ? "none" : "block";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hashtagsContainer = document.getElementById("hashtags");
+    const text = hashtagsContainer.textContent;
+    const hashtagRegex = /#\S+/g;
+
+    hashtagsContainer.innerHTML = text.replace(hashtagRegex, (hashtag) => {
+        const url = `https://www.google.com/search?q=${encodeURIComponent(hashtag)}`;
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${hashtag}</a>`;
+    });
+});
