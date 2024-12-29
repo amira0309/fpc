@@ -30,19 +30,32 @@
 
     <script>
         const form = document.getElementById('contactForm');
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', async function(event) {
             event.preventDefault();
+    
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-
-            console.log('Имя:', name);
-            console.log('Email:', email);
-            console.log('Сообщение:', message);
-
-            alert('Ваше сообщение отправлено!');
-            form.reset();
+    
+            try {
+                const response = await fetch('http://localhost:3000/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message }),
+                });
+    
+                if (response.ok) {
+                    alert('Сообщение успешно отправлено!');
+                    form.reset();
+                } else {
+                    alert('Ошибка при отправке сообщения.');
+                }
+            } catch (error) {
+                alert('Не удалось отправить сообщение.');
+                console.error(error);
+            }
         });
     </script>
+    
 </body>
 </html>
